@@ -5,14 +5,16 @@ import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
-class WelcomImage extends StatelessWidget {
-  const WelcomImage({super.key});
+class WelcomeImage extends StatelessWidget {
+  const WelcomeImage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        color: ColorManager.primary,
+      ),
       padding: const EdgeInsets.all(AppValues.v10),
-      color: ColorManager.secondary,
       child: Center(
         child: Column(
           children: [
@@ -30,7 +32,7 @@ class WelcomImage extends StatelessWidget {
               style: TextStyle(
                 fontFamily: Constants.reenieBeanie,
                 fontSize: AppValues.v64,
-                color: ColorManager.primary,
+                color: ColorManager.secondary,
               ),
               textAlign: TextAlign.center,
             ),

@@ -1,5 +1,6 @@
 class AppValues {
   static const double v0 = 0.0;
+  static const double v2 = 2.0;
   static const double v0_2 = 0.2;
   static const double v0_5 = 0.5;
   static const double v0_7 = 0.7;
@@ -26,4 +27,6 @@ class AppValues {
   static const double v50 = 50.0;
   static const double v60 = 60.0;
   static const double v64 = 64.0;
+  static const double v70 = 70.0;
+  static const double v120 = 120.0;
 }

@@ -3,7 +3,8 @@ import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class ForwardButton extends StatelessWidget {
-  const ForwardButton({super.key});
+  final void Function()? onPressed;
+  const ForwardButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +14,7 @@ class ForwardButton extends StatelessWidget {
       child: IconButton(
         iconSize: 32,
         icon: const Icon(Icons.arrow_forward),
-        onPressed: () {
-          // TODO: navigate to the next screen
-        },
+        onPressed: onPressed,
       ),
     );
   }

@@ -24,7 +24,7 @@ class WelcomeText extends StatelessWidget {
 
         // text 2
         Text(
-          StringsManager.welcomeText1,
+          StringsManager.welcomeText2,
           style: Styles.textStyle18.copyWith(
             color: ColorManager.grey2,
           ),

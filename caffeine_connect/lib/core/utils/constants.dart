@@ -5,4 +5,5 @@ abstract class Constants {
   static const int splashScreenDelayInSeconds = 3;
   static const int zero = 0;
   static const double nextButtonRadius = 32;
+  static const int codeLength = 4;
 }

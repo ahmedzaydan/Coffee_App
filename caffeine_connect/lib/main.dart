@@ -10,9 +10,10 @@ class CaffeineConnect extends StatelessWidget {
   const CaffeineConnect({super.key});
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp.router(
+    return MaterialApp.router(
       routerConfig: RoutesManager.router,
       theme: ThemeManager.lightTheme,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
