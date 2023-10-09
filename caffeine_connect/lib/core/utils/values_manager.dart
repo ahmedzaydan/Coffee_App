@@ -12,11 +12,13 @@ class AppValues {
   static const double v10 = 10.0;
   static const double v12 = 12.0;
   static const double v14 = 14.0;
+  static const double v15 = 15.0;
   static const double v16 = 16.0;
   static const double v18 = 18.0;
   static const double v20 = 20.0;
   static const double v22 = 22.0;
   static const double v24 = 24.0;
+  static const double v25 = 25.0;
   static const double v26 = 26.0;
   static const double v28 = 28.0;
   static const double v30 = 30.0;
@@ -28,5 +30,8 @@ class AppValues {
   static const double v60 = 60.0;
   static const double v64 = 64.0;
   static const double v70 = 70.0;
+  static const double v100 = 100.0;
   static const double v120 = 120.0;
+  static const double v140 = 140.0;
+  static const double v200 = 200.0;
 }

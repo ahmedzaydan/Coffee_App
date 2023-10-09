@@ -22,4 +22,17 @@ abstract class StringsManager {
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
   static const String enterCode = 'Enter the OTP code which sent to your email';
+  
+  static const String empty = '';
+
+  // menu 
+  static const String welcome = 'Welcome';
+  static const String username = 'Username';
+  static const String selectYourCoffee = 'Select your coffee';
+  static const String americano = 'Americano';
+  static const String cappuccino = 'Cappuccino';
+  static const String latte = 'Latte';
+  static const String flatWhite = 'Flat White';
+  static const String raf = 'Raf';
+  static const String espresso = 'Espresso';
 }

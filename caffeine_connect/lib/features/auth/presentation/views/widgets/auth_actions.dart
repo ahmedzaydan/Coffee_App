@@ -9,14 +9,12 @@ class AuthActions extends StatelessWidget {
   final String? textButtonContent;
   final void Function()? onPressed;
   final String? dest;
-  final bool? withDelay;
   const AuthActions({
     super.key,
     this.text1,
     this.textButtonContent,
     this.onPressed,
     this.dest,
-    this.withDelay,
   });
 
   @override
@@ -47,7 +45,6 @@ class AuthActions extends StatelessWidget {
               ? () => navigateTo(
                     context: context,
                     dest: dest!,
-                    withDelay: withDelay,
                   )
               : null,
         ),

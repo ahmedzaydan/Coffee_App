@@ -23,7 +23,7 @@ class SplashView extends StatelessWidget {
                   navigateTo(
                     context: context,
                     dest: RoutesManager.menuView,
-                    // withDelay: true,
+                    replace: true,
                   );
                 },
               ),
