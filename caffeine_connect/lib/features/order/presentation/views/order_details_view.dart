@@ -24,6 +24,16 @@ class OrderDetailsView extends StatelessWidget {
               sourceContext: context,
             ),
             OrderImage(image: item.image),
+            // name + count
+            // ristretto
+            // onsite/takeaway
+            // volume
+            // prepare by a certain time
+            // time
+            // coffee lover assemblage
+            // total price
+            // next button
+
           ],
         ),
       ),
