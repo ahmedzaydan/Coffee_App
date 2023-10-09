@@ -10,17 +10,14 @@ class MenuItemsGridView extends StatelessWidget {
     return GridView.builder(
       scrollDirection: Axis.vertical,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: 2, // TODO: make them responsive
         childAspectRatio: 0.9,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
       itemCount: menuItems.length,
       itemBuilder: (context, index) {
-        return GridViewMenuItem(
-          name: menuItems[index].name,
-          image: menuItems[index].image,
-        );
+        return GridViewMenuItem(item: menuItems[index]);
       },
     );
   }

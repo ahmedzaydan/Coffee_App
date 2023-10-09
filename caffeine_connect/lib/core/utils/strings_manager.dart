@@ -22,10 +22,10 @@ abstract class StringsManager {
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
   static const String enterCode = 'Enter the OTP code which sent to your email';
-  
+
   static const String empty = '';
 
-  // menu 
+  // menu
   static const String welcome = 'Welcome';
   static const String username = 'Username';
   static const String selectYourCoffee = 'Select your coffee';
@@ -35,4 +35,7 @@ abstract class StringsManager {
   static const String flatWhite = 'Flat White';
   static const String raf = 'Raf';
   static const String espresso = 'Espresso';
+
+  // order details
+  static const String order = 'Order';
 }

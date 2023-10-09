@@ -14,7 +14,6 @@ class MenuView extends StatelessWidget {
   });
   //TODO: uncomment line above and
   // wrap when naviagate with cubit
-  // TODO: change color in bottom nav bar for items
 
   @override
   Widget build(BuildContext context) {
