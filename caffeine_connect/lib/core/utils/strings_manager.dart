@@ -38,4 +38,10 @@ abstract class StringsManager {
 
   // order details
   static const String order = 'Order';
+  static const String ristretto = 'Ristretto';
+  static const String one = 'One';
+  static const String two = 'Two';
+  static const String onsiteTakeaway = 'Onsite / Takeaway';
+  static const String volume = 'Volume, ml';
+  static const String prepareByCertainTime = 'Prepare by a certain time today?';
 }
