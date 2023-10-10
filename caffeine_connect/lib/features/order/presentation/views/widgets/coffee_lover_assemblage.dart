@@ -2,7 +2,6 @@ import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeLoverAssemblage extends StatelessWidget {
@@ -40,9 +39,7 @@ class CoffeeLoverAssemblage extends StatelessWidget {
             color: ColorManager.primary,
           ),
         ),
-        onTap: () {
-          if (kDebugMode) print('tapped');
-        },
+        onTap: () {},
       ),
     );
   }

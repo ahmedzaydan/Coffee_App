@@ -2,8 +2,7 @@ import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_app_bar.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/order_image.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/order_options_view.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/order_details_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OrderDetailsView extends StatelessWidget {
@@ -13,21 +12,19 @@ class OrderDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(AppValues.v25),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppValues.v5,
+            vertical: AppValues.v25,
+          ),
           child: Column(
             children: [
               CustomAppBar(
                 title: StringsManager.order,
                 sourceContext: context,
               ),
-              OrderImage(image: item.image),
-              const SizedBox(height: AppValues.v10),
-              OrderOptions(item: item),
-              // coffee lover assemblage
-              // total price
-              // next button
+              OrderDetailsViewBody(item: item),
             ],
           ),
         ),

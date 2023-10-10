@@ -1,7 +1,6 @@
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/vertical_separator.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/name_count.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/onsite_takeaway.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/prepare_by_certain_time.dart';
@@ -27,7 +26,6 @@ class OrderOptions extends StatelessWidget {
         const VerticalSeparator(),
         const PrepareByCertainTime(),
         const SizedBox(height: AppValues.v10),
-        const CoffeeLoverAssemblage(),
       ],
     );
   }
