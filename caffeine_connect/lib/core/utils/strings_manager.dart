@@ -44,4 +44,5 @@ abstract class StringsManager {
   static const String onsiteTakeaway = 'Onsite / Takeaway';
   static const String volume = 'Volume, ml';
   static const String prepareByCertainTime = 'Prepare by a certain time today?';
+  static const String coffeeLoverAssemblage = 'Coffee lover assemblage';
 }

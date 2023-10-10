@@ -18,4 +18,6 @@ class ColorManager {
   static const Color blue = Color(0xff007AFF);
   static const Color transparent = Colors.transparent;
   static const Color green = Color(0xff34C759);
+  static const Color pink1 = Color(0xffC58BF2);
+  static const Color pink2 = Color(0xffEEA4CE);
 }
