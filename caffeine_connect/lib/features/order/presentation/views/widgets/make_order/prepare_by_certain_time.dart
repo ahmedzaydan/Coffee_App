@@ -1,8 +1,8 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
+import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/select_time_dialog.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/time_input_box.dart';
 import 'package:flutter/material.dart';
 
 class PrepareByCertainTime extends StatelessWidget {
@@ -14,7 +14,10 @@ class PrepareByCertainTime extends StatelessWidget {
       children: [
         Row(
           children: [
-            const DecoratedText(name: StringsManager.prepareByCertainTime),
+            const Text(
+              StringsManager.prepareByCertainTime,
+              style: Styles.textStyle14,
+            ),
             const Spacer(),
             Switch(
               value: true, // TODO: get value from cubit

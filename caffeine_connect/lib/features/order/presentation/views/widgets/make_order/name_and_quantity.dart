@@ -1,11 +1,34 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
-import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
 import 'package:flutter/material.dart';
 
-class QuantityWidget extends StatelessWidget {
-  const QuantityWidget({super.key});
+class NameAndQuantity extends StatelessWidget {
+  const NameAndQuantity({
+    super.key,
+    required this.item,
+  });
+
+  final MenuItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          item.name,
+          style: Styles.textStyle14,
+        ),
+        const Quantity(),
+      ],
+    );
+  }
+}
+
+class Quantity extends StatelessWidget {
+  const Quantity({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +55,9 @@ class QuantityWidget extends StatelessWidget {
           ),
 
           // value
-          Text(
+          const Text(
             '1', // TODO: replace with value
-            style: Styles.textStyle14.copyWith(
-              fontFamily: Constants.dmSans,
-              color: ColorManager.black1,
-            ),
+            style: Styles.textStyle14,
           ),
           // plus button
           IconButton(

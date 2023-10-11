@@ -1,3 +1,5 @@
+import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'values_manager.dart';
@@ -18,6 +20,8 @@ abstract class Styles {
   static const TextStyle textStyle14 = TextStyle(
     fontSize: AppValues.v14,
     fontWeight: FontWeight.w500,
+    fontFamily: Constants.poppins,
+    color: ColorManager.black1
   );
 
   static const TextStyle textStyle16 = TextStyle(

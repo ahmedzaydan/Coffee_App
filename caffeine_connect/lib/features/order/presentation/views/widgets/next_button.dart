@@ -1,7 +1,7 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
+import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
 import 'package:flutter/material.dart';
 
 class NextButton extends StatelessWidget {
@@ -24,9 +24,11 @@ class NextButton extends StatelessWidget {
         minimumSize: Size(width, AppValues.v46),
       ),
       onPressed: onPressed,
-      child: const DecoratedText(
-        name: StringsManager.next,
-        color: ColorManager.primary,
+      child: Text(
+        StringsManager.next,
+        style: Styles.textStyle14.copyWith(
+          color: ColorManager.primary,
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/widgets/forward_button.dart';
@@ -26,6 +27,7 @@ class AuthActions extends StatelessWidget {
             text1!,
             style: Styles.textStyle14.copyWith(
               color: ColorManager.grey2,
+              fontFamily: Constants.poppins,
             ),
           ),
         if (textButtonContent != null)
@@ -36,6 +38,7 @@ class AuthActions extends StatelessWidget {
               textButtonContent!,
               style: Styles.textStyle14.copyWith(
                 color: ColorManager.secondary,
+                fontFamily: Constants.poppins,
               ),
             ),
           ),

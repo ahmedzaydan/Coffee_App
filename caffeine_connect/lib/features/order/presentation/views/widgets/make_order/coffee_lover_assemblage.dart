@@ -1,7 +1,9 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
+import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeLoverAssemblage extends StatelessWidget {
@@ -27,9 +29,11 @@ class CoffeeLoverAssemblage extends StatelessWidget {
             color: ColorManager.black,
           ),
         ),
-        title: const DecoratedText(
-          name: StringsManager.coffeeLoverAssemblage,
-          color: ColorManager.primary,
+        title: Text(
+          StringsManager.coffeeLoverAssemblage,
+          style: Styles.textStyle14.copyWith(
+            color: ColorManager.primary,
+          ),
         ),
         trailing: IconButton(
           iconSize: 20,
@@ -39,7 +43,12 @@ class CoffeeLoverAssemblage extends StatelessWidget {
             color: ColorManager.primary,
           ),
         ),
-        onTap: () {},
+        onTap: () {
+          navigateTo(
+            dest: RoutesManager.coffeeLoverAssemblageView,
+            context: context,
+          );
+        },
       ),
     );
   }

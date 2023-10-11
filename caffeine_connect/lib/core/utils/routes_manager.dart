@@ -3,8 +3,9 @@ import 'package:caffeine_connect/features/auth/presentation/views/login_view.dar
 import 'package:caffeine_connect/features/auth/presentation/views/register_view.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/verification_view.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
+import 'package:caffeine_connect/features/order/presentation/views/coffee_lover_assemblage_view.dart';
+import 'package:caffeine_connect/features/order/presentation/views/make_order_view.dart';
 import 'package:caffeine_connect/features/order/presentation/views/menu_view.dart';
-import 'package:caffeine_connect/features/order/presentation/views/order_details_view.dart';
 import 'package:caffeine_connect/features/splash/presentation/views/splash_view.dart';
 import 'package:caffeine_connect/features/splash/presentation/views/welcome_view.dart';
 import 'package:go_router/go_router.dart';
@@ -20,8 +21,8 @@ abstract class RoutesManager {
   static const String verificationView = '/verification';
   // static const String menuView = '/menu';
   static const String menuView = '/'; // TODO: swap
-  static const String orderDetails = '/orderDetails';
-  static const String orderOptionsAssistance = '/orderOptionsAssistance';
+  static const String makeOrder = '/makeOrder';
+  static const String coffeeLoverAssemblageView = '/coffeeLoverAssemblage';
   static const String chooseBaristaView = '/chooseBarista';
   static const String coffeeCountry = '/coffeeCountry';
   static const String coffeeSortView = '/coffeeSort';
@@ -73,11 +74,17 @@ abstract class RoutesManager {
         builder: (context, state) => const MenuView(),
       ),
 
-      // order details screen
+      // make order screen
       GoRoute(
-        path: orderDetails,
+        path: makeOrder,
         builder: (context, state) =>
-            OrderDetailsView(item: state.extra as MenuItem),
+            MakeOrderView(item: state.extra as MenuItem),
+      ),
+
+      // coffee lover assemblage screen
+      GoRoute(
+        path: coffeeLoverAssemblageView,
+        builder: (context, state) => const CoffeeLoverAssemblageView(),
       ),
     ],
   );

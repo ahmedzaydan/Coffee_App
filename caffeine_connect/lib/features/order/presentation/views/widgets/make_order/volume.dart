@@ -2,7 +2,6 @@ import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
 import 'package:flutter/material.dart';
 
 class Volume extends StatelessWidget {
@@ -12,7 +11,10 @@ class Volume extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        DecoratedText(name: StringsManager.volume),
+        Text(
+          StringsManager.volume,
+          style: Styles.textStyle14,
+        ),
         Spacer(),
         CupWithSize(
           cupSize: 20,

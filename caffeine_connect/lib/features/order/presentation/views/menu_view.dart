@@ -1,9 +1,10 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_bottom_nav_bar.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/menu_items_grid_view.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/menu/menu_items_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class MenuView extends StatelessWidget {
@@ -11,9 +12,8 @@ class MenuView extends StatelessWidget {
   const MenuView({
     super.key,
     // required this.username,
+    //TODO: uncomment line above and wrap when naviagate with cubit
   });
-  //TODO: uncomment line above and
-  // wrap when naviagate with cubit
 
   @override
   Widget build(BuildContext context) {
@@ -91,6 +91,7 @@ class AppBarTitle extends StatelessWidget {
             StringsManager.welcome,
             style: Styles.textStyle14.copyWith(
               color: ColorManager.grey4,
+              fontFamily: Constants.poppins,
             ),
           ),
           Text(

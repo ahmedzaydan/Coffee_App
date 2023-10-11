@@ -36,7 +36,7 @@ abstract class StringsManager {
   static const String raf = 'Raf';
   static const String espresso = 'Espresso';
 
-  // order details
+  // make order
   static const String order = 'Order';
   static const String ristretto = 'Ristretto';
   static const String one = 'One';
@@ -47,4 +47,17 @@ abstract class StringsManager {
   static const String coffeeLoverAssemblage = 'Coffee lover assemblage';
   static const String totalPrice = 'Total price';
   static const String next = 'Next';
+  
+  // coffee lover assemblege
+  static const String selectBarista = 'Select a barista';
+  static const String coffeeType = 'Coffee type';
+  static const String coffeeSort = 'Coffee sort';
+  static const String roasting = 'Roasting';
+  static const String grinding = 'Grinding';
+  static const String milk = 'Milk';
+  static const String syrup = 'Syrup';
+  static const String additives = 'Additives';
+  static const String ice = 'Ice';
+  static const String arabica = 'Arabica';
+  static const String robusta = 'Robusta'; 
 }

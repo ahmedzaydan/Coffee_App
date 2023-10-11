@@ -1,5 +1,4 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
-import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
@@ -22,7 +21,7 @@ class GridViewMenuItem extends StatelessWidget {
         onTap: () {
           navigateTo(
             context: context,
-            dest: RoutesManager.orderDetails,
+            dest: RoutesManager.makeOrder,
             extra: item,
           );
         },
@@ -49,10 +48,7 @@ class GridViewMenuItem extends StatelessWidget {
               // item name
               Text(
                 item.name,
-                style: Styles.textStyle14.copyWith(
-                  color: ColorManager.black1,
-                  fontFamily: Constants.dmSans,
-                ),
+                style: Styles.textStyle14,
               ),
             ],
           ),

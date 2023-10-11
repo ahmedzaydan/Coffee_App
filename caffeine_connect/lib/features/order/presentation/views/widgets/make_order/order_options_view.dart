@@ -1,11 +1,11 @@
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/vertical_separator.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/name_count.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/onsite_takeaway.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/prepare_by_certain_time.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/ristretto.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/volume.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/name_and_quantity.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/onsite_takeaway.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/prepare_by_certain_time.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/ristretto.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/volume.dart';
 import 'package:flutter/material.dart';
 
 class OrderOptions extends StatelessWidget {
@@ -16,7 +16,7 @@ class OrderOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        NameAndCount(item: item),
+        NameAndQuantity(item: item),
         const VerticalSeparator(),
         const Ristretto(),
         const VerticalSeparator(),

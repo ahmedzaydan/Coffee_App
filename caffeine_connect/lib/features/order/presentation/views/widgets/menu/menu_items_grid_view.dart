@@ -1,5 +1,5 @@
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/grid_view_menu_item.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/menu/grid_view_menu_item.dart';
 import 'package:flutter/material.dart';
 
 class MenuItemsGridView extends StatelessWidget {

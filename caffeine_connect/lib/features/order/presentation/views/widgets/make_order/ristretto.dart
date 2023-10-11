@@ -3,7 +3,6 @@ import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/decorated_text.dart';
 import 'package:flutter/material.dart';
 
 class Ristretto extends StatelessWidget {
@@ -14,7 +13,10 @@ class Ristretto extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const DecoratedText(name: StringsManager.ristretto),
+        const Text(
+          StringsManager.ristretto,
+          style: Styles.textStyle14,
+        ),
         const Spacer(),
         Container(
           height: AppValues.v40,
