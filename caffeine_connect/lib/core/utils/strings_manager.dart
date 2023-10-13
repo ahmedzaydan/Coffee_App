@@ -60,4 +60,5 @@ abstract class StringsManager {
   static const String ice = 'Ice';
   static const String arabica = 'Arabica';
   static const String robusta = 'Robusta'; 
+  static const String select = 'Select';
 }

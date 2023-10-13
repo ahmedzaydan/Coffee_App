@@ -1,9 +1,10 @@
+import 'package:caffeine_connect/core/utils/assets_manager.dart';
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
-import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_icon.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_image.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Roasting extends StatelessWidget {
   const Roasting({super.key});
@@ -23,62 +24,27 @@ class Roasting extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // one flame
-              FlameWidget(child: FlameIconsList(count: 1)),
+              CustomIcon(
+                child: CustomImage(image: AssetsManager.flame),
+              ),
 
               // two flames
-              FlameWidget(child: FlameIconsList(count: 2)),
-
+              CustomIcon(
+                count: 2,
+                child: CustomImage(image: AssetsManager.flame),
+              ),
+              
               // three flames
-              FlameWidget(
-                child: Column(
-                  children: [
-                    FlameIconsList(count: 1),
-                    FlameIconsList(count: 2),
-                  ],
+              CustomIcon(
+                count: 3,
+                child: CustomImage(
+                  image: AssetsManager.flame,
+                  color: ColorManager.black1,
                 ),
               ),
             ],
           ),
         ),
-      ],
-    );
-  }
-}
-
-class FlameWidget extends StatelessWidget {
-  const FlameWidget({super.key, required this.child});
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        // TODO: toggle the color
-      },
-      child: child,
-    );
-  }
-}
-
-class FlameIconsList extends StatelessWidget {
-  const FlameIconsList({
-    super.key,
-    required this.count,
-    this.color = ColorManager.grey3,
-  });
-  final int count;
-  final Color color;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        for (int i = 0; i < count; i++) ...[
-          FaIcon(
-            FontAwesomeIcons.fireFlameCurved,
-            color: color,
-          ),
-          if (count > 1) const SizedBox(width: AppValues.v5),
-        ]
       ],
     );
   }

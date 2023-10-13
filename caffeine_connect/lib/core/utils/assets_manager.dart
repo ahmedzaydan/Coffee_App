@@ -11,4 +11,6 @@ abstract class AssetsManager {
   static const String flatWhite = '$basePath/flat_white.jpg';
   static const String latte = '$basePath/latte.jpg';
   static const String raf = '$basePath/raf.jpg';
+  static const String coffeeSeed = '$basePath/coffee_bean.svg';
+  static const String flame = '$basePath/flame.svg';
 }

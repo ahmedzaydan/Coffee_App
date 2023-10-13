@@ -7,8 +7,8 @@ class VerticalSeparator extends StatelessWidget {
   final double bottom;
   const VerticalSeparator({
     super.key,
-    this.top = AppValues.v15,
-    this.bottom = AppValues.v15,
+    this.top = AppValues.v10,
+    this.bottom = AppValues.v10,
   });
 
   @override
