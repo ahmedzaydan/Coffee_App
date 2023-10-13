@@ -3,6 +3,8 @@ import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/vertical_separator.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage/coffee_type.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage/grinding.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage/roasting.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +31,7 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
             ),
             const VerticalSeparator(),
             const CoffeeType(),
-            const VerticalSeparator(),
+            const VerticalSeparator(bottom: AppValues.v0),
             // coffee sort
             CustomListTile(
               title: StringsManager.coffeeSort,
@@ -37,9 +39,11 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
                 // TODO: go to coffee sort screen
               },
             ),
+            const VerticalSeparator(top: AppValues.v0),
+            const Roasting(),
             const VerticalSeparator(),
-            // roasting
-            // grind
+            const Grinding(),
+            const VerticalSeparator(),
             // milk
             // syrup
             // additives

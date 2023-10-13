@@ -3,16 +3,18 @@ import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
 class VerticalSeparator extends StatelessWidget {
-  final double padding;
+  final double top;
+  final double bottom;
   const VerticalSeparator({
     super.key,
-    this.padding = AppValues.v15,
+    this.top = AppValues.v15,
+    this.bottom = AppValues.v15,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: padding),
+      padding: EdgeInsets.only(top: top, bottom: bottom),
       child: Container(
         width: double.infinity,
         height: AppValues.v2,

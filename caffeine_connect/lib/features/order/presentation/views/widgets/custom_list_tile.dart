@@ -10,6 +10,7 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      minVerticalPadding: AppValues.v0,
       onTap: onTap,
       title: Text(
         title,

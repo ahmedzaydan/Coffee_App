@@ -25,6 +25,7 @@ class AppValues {
   static const double v37 = 37.0;
   static const double v40 = 40.0;
   static const double v43 = 43.0;
+  static const double v45 = 45.0;
   static const double v46 = 46.0;
   static const double v48 = 48.0;
   static const double v50 = 50.0;
