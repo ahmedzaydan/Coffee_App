@@ -25,7 +25,7 @@ class AuthText extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: AppValues.v20),
+          padding: const EdgeInsets.symmetric(vertical: ValuesManager.v20),
           child: Text(
             text2,
             style: Styles.textStyle14.copyWith(

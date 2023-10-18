@@ -4,6 +4,7 @@ import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
+// TODO: replace arrow with login or register buttonw
 class NextButton extends StatelessWidget {
   const NextButton({
     super.key,
@@ -18,10 +19,10 @@ class NextButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorManager.secondary,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppValues.v40),
+          borderRadius: BorderRadius.circular(ValuesManager.v40),
         ),
         disabledBackgroundColor: ColorManager.secondary,
-        minimumSize: Size(width, AppValues.v46),
+        minimumSize: Size(width, ValuesManager.v46),
       ),
       onPressed: onPressed,
       child: Text(

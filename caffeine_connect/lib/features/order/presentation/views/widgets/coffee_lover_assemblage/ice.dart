@@ -44,15 +44,15 @@ class IceQube extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppValues.v5),
+        borderRadius: BorderRadius.circular(ValuesManager.v5),
         color: ColorManager.transparent,
         border: Border.all(
-          width: AppValues.v2,
+          width: ValuesManager.v2,
           color: color,
         ),
       ),
-      width: AppValues.v20,
-      height: AppValues.v20,
+      width: ValuesManager.v20,
+      height: ValuesManager.v20,
     );
   }
 }

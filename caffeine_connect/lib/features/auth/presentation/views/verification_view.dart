@@ -16,7 +16,7 @@ class VerificationView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(AppValues.v30),
+        padding: const EdgeInsets.all(ValuesManager.v30),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -26,9 +26,9 @@ class VerificationView extends StatelessWidget {
                 text1: StringsManager.verification,
                 text2: StringsManager.enterCode,
               ),
-              const SizedBox(height: AppValues.v20),
+              const SizedBox(height: ValuesManager.v20),
               const Center(child: CodeDigitsInput()),
-              const SizedBox(height: AppValues.v20),
+              const SizedBox(height: ValuesManager.v20),
               // TODO: validate before naviagation
               Align(
                 alignment: Alignment.bottomRight,
@@ -55,21 +55,21 @@ class CodeDigitsInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppValues.v70,
+      height: ValuesManager.v70,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return Container(
-            margin: const EdgeInsets.all(AppValues.v10),
-            height: AppValues.v70,
-            width: AppValues.v48,
+            margin: const EdgeInsets.all(ValuesManager.v10),
+            height: ValuesManager.v70,
+            width: ValuesManager.v48,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppValues.v10),
+              borderRadius: BorderRadius.circular(ValuesManager.v10),
               color: ColorManager.offWhite,
               border: Border.all(
                 color: ColorManager.secondary,
-                width: AppValues.v2,
+                width: ValuesManager.v2,
               ),
             ),
             // child: const TextField(), // TODO: implement this later

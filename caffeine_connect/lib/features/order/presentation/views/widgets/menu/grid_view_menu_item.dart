@@ -28,22 +28,22 @@ class GridViewMenuItem extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: ColorManager.primary,
-            borderRadius: BorderRadius.circular(AppValues.v15),
+            borderRadius: BorderRadius.circular(ValuesManager.v15),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // item image
               ClipRRect(
-                borderRadius: BorderRadius.circular(AppValues.v15),
+                borderRadius: BorderRadius.circular(ValuesManager.v15),
                 child: Image.asset(
                   item.image,
                   fit: BoxFit.cover,
-                  height: AppValues.v100, // TODO: change to responsive
+                  height: ValuesManager.v100, // TODO: change to responsive
                 ),
               ),
 
-              const SizedBox(height: AppValues.v10),
+              const SizedBox(height: ValuesManager.v10),
 
               // item name
               Text(

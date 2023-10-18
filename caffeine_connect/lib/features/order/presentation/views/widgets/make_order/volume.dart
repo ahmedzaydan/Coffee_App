@@ -21,13 +21,13 @@ class Volume extends StatelessWidget {
           cupCapacity: 250,
           cupColor: ColorManager.grey4,
         ),
-        SizedBox(width: AppValues.v10),
+        SizedBox(width: ValuesManager.v10),
         CupWithSize(
           cupSize: 30,
           cupCapacity: 350,
           cupColor: ColorManager.black1,
         ),
-        SizedBox(width: AppValues.v10),
+        SizedBox(width: ValuesManager.v10),
         CupWithSize(
           cupSize: 40,
           cupCapacity: 450,

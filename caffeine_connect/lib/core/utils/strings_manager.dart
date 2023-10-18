@@ -47,7 +47,7 @@ abstract class StringsManager {
   static const String coffeeLoverAssemblage = 'Coffee lover assemblage';
   static const String totalPrice = 'Total price';
   static const String next = 'Next';
-  
+
   // coffee lover assemblege
   static const String selectBarista = 'Select a barista';
   static const String coffeeType = 'Coffee type';
@@ -59,6 +59,20 @@ abstract class StringsManager {
   static const String additives = 'Additives';
   static const String ice = 'Ice';
   static const String arabica = 'Arabica';
-  static const String robusta = 'Robusta'; 
+  static const String robusta = 'Robusta';
   static const String select = 'Select';
+  static const String none = 'None';
+
+  // milk options
+  static const String cows = 'Cow\'s';
+  static const String lactoseFree = 'Lactose-free';
+  static const String skimmed = 'Skimmed';
+  static const String vegatable = 'Vegetable';
+
+  // syrup options
+  static const String amaretto = 'Amaretto';
+  static const String coconut = 'Coconut';
+  static const String vanilla = 'Vanilla';
+  static const String caramel = 'Caramel'; 
+   
 }

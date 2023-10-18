@@ -23,7 +23,7 @@ class OnsiteTakeaway extends StatelessWidget {
             color: ColorManager.grey1, // TODO: get color from cubit
           ),
         ),
-        const SizedBox(width: AppValues.v10),
+        const SizedBox(width: ValuesManager.v10),
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.local_drink_rounded),

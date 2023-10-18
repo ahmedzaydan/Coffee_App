@@ -7,8 +7,8 @@ class CustomImage extends StatelessWidget {
   const CustomImage({
     super.key,
     required this.image,
-    this.height = AppValues.v30,
-    this.width = AppValues.v30,
+    this.height = ValuesManager.v30,
+    this.width = ValuesManager.v30,
     this.color = ColorManager.grey3,
   });
   final String image;

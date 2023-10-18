@@ -35,10 +35,10 @@ class Quantity extends StatelessWidget {
     return Container(
       height: MediaQuery.sizeOf(context).height * 0.05,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppValues.v50),
+        borderRadius: BorderRadius.circular(ValuesManager.v50),
         border: Border.all(
           color: ColorManager.grey3,
-          width: AppValues.v2,
+          width: ValuesManager.v2,
         ),
       ),
       child: Row(
@@ -50,7 +50,7 @@ class Quantity extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(
               Icons.remove,
-              size: AppValues.v18,
+              size: ValuesManager.v18,
             ),
           ),
 
@@ -65,7 +65,7 @@ class Quantity extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(
               Icons.add,
-              size: AppValues.v18,
+              size: ValuesManager.v18,
             ),
           ),
         ],

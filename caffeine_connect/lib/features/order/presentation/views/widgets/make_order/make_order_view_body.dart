@@ -15,12 +15,12 @@ class MakeOrderViewBody extends StatelessWidget {
     return Column(
       children: [
         OrderImage(image: item.image),
-        const SizedBox(height: AppValues.v10),
+        const SizedBox(height: ValuesManager.v10),
         OrderOptions(item: item),
         const CoffeeLoverAssemblage(),
-        const SizedBox(height: AppValues.v15),
+        const SizedBox(height: ValuesManager.v15),
         const TotalPrice(price: 5.00), // TODO: get price from cubit
-        const SizedBox(height: AppValues.v15),
+        const SizedBox(height: ValuesManager.v15),
         const NextButton(),
       ],
     );

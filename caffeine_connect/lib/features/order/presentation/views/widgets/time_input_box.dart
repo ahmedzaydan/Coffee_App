@@ -17,7 +17,7 @@ class TimeInputBox extends StatelessWidget {
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppValues.v10),
+            borderRadius: BorderRadius.circular(ValuesManager.v10),
           ),
         ),
       ),

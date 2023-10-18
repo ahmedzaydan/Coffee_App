@@ -18,7 +18,7 @@ class ForwardPasswordView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(AppValues.v30),
+        padding: const EdgeInsets.all(ValuesManager.v30),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -28,7 +28,7 @@ class ForwardPasswordView extends StatelessWidget {
                 text1: StringsManager.forgotPassword,
                 text2: StringsManager.enterYourEmail,
               ),
-              const SizedBox(height: AppValues.v10),
+              const SizedBox(height: ValuesManager.v10),
               // email address
               Form(
                 key: _formKey,
@@ -41,7 +41,7 @@ class ForwardPasswordView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: AppValues.v120),
+              const SizedBox(height: ValuesManager.v120),
               Align(
                 alignment: Alignment.bottomRight,
                 child: ForwardButton(

@@ -17,7 +17,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(AppValues.v30),
+        padding: const EdgeInsets.all(ValuesManager.v30),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -28,12 +28,12 @@ class LoginView extends StatelessWidget {
                 text2: StringsManager.welcomeBack,
               ),
               LoginForm(),
-              const SizedBox(height: AppValues.v10),
+              const SizedBox(height: ValuesManager.v10),
               // forgot password
               const Padding(
                 padding: EdgeInsets.only(
-                  top: AppValues.v10,
-                  bottom: AppValues.v120,
+                  top: ValuesManager.v10,
+                  bottom: ValuesManager.v120,
                 ),
                 child: ForgotPassword(),
               ),
@@ -80,7 +80,7 @@ class LoginForm extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: AppValues.v10),
+          const SizedBox(height: ValuesManager.v10),
 
           // password
           CustomTextFormField(

@@ -29,7 +29,7 @@ class WelcomeView extends StatelessWidget {
             const WelcomeImage(),
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: AppValues.v20,
+                horizontal: ValuesManager.v20,
                 vertical: height * 0.05,
               ),
               child: const WelcomeText(),
@@ -39,7 +39,7 @@ class WelcomeView extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                   top: height * 0.03,
-                  right: AppValues.v30,
+                  right: ValuesManager.v30,
                 ),
                 child: ForwardButton(
                   onPressed: () => navigateTo(

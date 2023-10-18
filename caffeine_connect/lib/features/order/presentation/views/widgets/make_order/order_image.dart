@@ -9,11 +9,11 @@ class OrderImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(AppValues.v10),
+      padding: const EdgeInsets.all(ValuesManager.v10),
       height: 140,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppValues.v12),
+        borderRadius: BorderRadius.circular(ValuesManager.v12),
         color: ColorManager.offWhite,
       ),
       child: FittedBox(

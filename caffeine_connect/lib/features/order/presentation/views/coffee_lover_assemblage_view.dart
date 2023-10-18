@@ -23,7 +23,7 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
         title: StringsManager.coffeeLoverAssemblage,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(AppValues.v25),
+        padding: const EdgeInsets.all(ValuesManager.v25),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -36,7 +36,7 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
               ),
               const VerticalSeparator(),
               const CoffeeType(),
-              const VerticalSeparator(bottom: AppValues.v0),
+              const VerticalSeparator(bottom: ValuesManager.v0),
               // coffee sort
               CustomListTile(
                 title: StringsManager.coffeeSort,
@@ -44,13 +44,13 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
                   // TODO: go to coffee sort screen
                 },
               ),
-              const VerticalSeparator(top: AppValues.v0),
+              const VerticalSeparator(top: ValuesManager.v0),
               const Roasting(),
               const VerticalSeparator(),
               const Grinding(),
               const VerticalSeparator(),
               const MilkSyrup(),
-              const VerticalSeparator(bottom: AppValues.v0),
+              const VerticalSeparator(bottom: ValuesManager.v0),
               // additives
               CustomListTile(
                 title: StringsManager.additives,
@@ -59,13 +59,13 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
                 },
               ),
               const VerticalSeparator(
-                top: AppValues.v0,
-                bottom: AppValues.v15,
+                top: ValuesManager.v0,
+                bottom: ValuesManager.v15,
               ),
               const Ice(),
-              const VerticalSeparator(top: AppValues.v15),
+              const VerticalSeparator(top: ValuesManager.v15),
               const TotalPrice(price: 9.00),
-              const SizedBox(height: AppValues.v20),
+              const SizedBox(height: ValuesManager.v20),
               const NextButton(), // TODO: (go to my order screen)
             ],
           ),

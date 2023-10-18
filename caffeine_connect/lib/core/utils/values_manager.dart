@@ -1,4 +1,4 @@
-class AppValues {
+abstract class ValuesManager {
   static const double v0 = 0.0;
   static const double v2 = 2.0;
   static const double v0_2 = 0.2;
@@ -35,5 +35,7 @@ class AppValues {
   static const double v100 = 100.0;
   static const double v120 = 120.0;
   static const double v140 = 140.0;
+  static const double v150 = 150.0;
   static const double v200 = 200.0;
+  static const double v250 = 250.0;
 }

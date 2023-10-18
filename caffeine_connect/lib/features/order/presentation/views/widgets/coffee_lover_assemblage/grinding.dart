@@ -27,14 +27,12 @@ class Grinding extends StatelessWidget {
               CustomIcon(
                 child: CustomImage(image: AssetsManager.coffeeSeed),
               ),
-              
-              SizedBox(width: AppValues.v10),
-
+              SizedBox(width: ValuesManager.v10),
               CustomIcon(
                 child: CustomImage(
                   image: AssetsManager.coffeeSeed,
-                  height: AppValues.v45,
-                  width: AppValues.v45,
+                  height: ValuesManager.v45,
+                  width: ValuesManager.v45,
                   color: ColorManager.black1,
                 ),
               ),

@@ -20,7 +20,8 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.suffixIcon,
     this.obsecureText = false,
-    this.suffixOnPressed, this.keyboardType, 
+    this.suffixOnPressed,
+    this.keyboardType,
   });
 
   @override
@@ -41,7 +42,7 @@ class CustomTextFormField extends StatelessWidget {
             prefixIcon != null ? CustomPrefixIcon(icon: prefixIcon!) : null,
         prefixIconConstraints: const BoxConstraints(
           minWidth: 0,
-          maxWidth: AppValues.v60,
+          maxWidth: ValuesManager.v60,
           minHeight: 0,
         ),
         suffixIcon: suffixIcon != null
@@ -68,17 +69,17 @@ class CustomPrefixIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(AppValues.v8),
+        padding: const EdgeInsets.all(ValuesManager.v8),
         child: SizedBox(
-          width: AppValues.v50,
+          width: ValuesManager.v50,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               icon,
-              const SizedBox(width: AppValues.v5),
+              const SizedBox(width: ValuesManager.v5),
               Container(
-                width: AppValues.v2,
-                height: AppValues.v20,
+                width: ValuesManager.v2,
+                height: ValuesManager.v20,
                 color: ColorManager.grey4,
               ),
             ],

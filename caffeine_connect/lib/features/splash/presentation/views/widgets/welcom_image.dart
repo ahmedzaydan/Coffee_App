@@ -14,7 +14,7 @@ class WelcomeImage extends StatelessWidget {
       decoration: const BoxDecoration(
         color: ColorManager.primary,
       ),
-      padding: const EdgeInsets.all(AppValues.v10),
+      padding: const EdgeInsets.all(ValuesManager.v10),
       child: Center(
         child: Column(
           children: [
@@ -25,13 +25,13 @@ class WelcomeImage extends StatelessWidget {
               height: 300,
             ),
 
-            const SizedBox(height: AppValues.v10),
+            const SizedBox(height: ValuesManager.v10),
             // text
             const Text(
               StringsManager.magicCoffee,
               style: TextStyle(
                 fontFamily: Constants.reenieBeanie,
-                fontSize: AppValues.v64,
+                fontSize: ValuesManager.v64,
                 color: ColorManager.secondary,
               ),
               textAlign: TextAlign.center,

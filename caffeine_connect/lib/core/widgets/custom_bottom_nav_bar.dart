@@ -15,14 +15,14 @@ class CustomBottomNavBar extends StatelessWidget {
             ? [
                 const BoxShadow(
                   color: ColorManager.grey4,
-                  blurRadius: AppValues.v10,
-                  offset: Offset(0, AppValues.v5),
+                  blurRadius: ValuesManager.v10,
+                  offset: Offset(0, ValuesManager.v5),
                 ),
               ]
             : null,
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(AppValues.v20),
+        borderRadius: BorderRadius.circular(ValuesManager.v20),
         child: BottomNavigationBar(
           currentIndex: 0, // TODO: make it dynamic
           elevation: 0.0,
@@ -38,21 +38,21 @@ class CustomBottomNavBar extends StatelessWidget {
   List<BottomNavigationBarItem> get _items => const [
         BottomNavigationBarItem(
           icon: Padding(
-            padding: EdgeInsets.only(top: AppValues.v15),
+            padding: EdgeInsets.only(top: ValuesManager.v15),
             child: Icon(Icons.storefront_outlined),
           ),
           label: StringsManager.empty,
         ),
         BottomNavigationBarItem(
           icon: Padding(
-            padding: EdgeInsets.only(top: AppValues.v15),
+            padding: EdgeInsets.only(top: ValuesManager.v15),
             child: Icon(Icons.shopify),
           ),
           label: StringsManager.empty,
         ),
         BottomNavigationBarItem(
           icon: Padding(
-            padding: EdgeInsets.only(top: AppValues.v15),
+            padding: EdgeInsets.only(top: ValuesManager.v15),
             child: Icon(Icons.history_edu_outlined),
           ),
           label: StringsManager.empty,

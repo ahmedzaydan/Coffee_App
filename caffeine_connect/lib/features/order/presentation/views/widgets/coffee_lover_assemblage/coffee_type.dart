@@ -25,15 +25,16 @@ class CoffeeType extends StatelessWidget {
                 activeColor: ColorManager.blue,
                 inactiveColor: ColorManager.grey3,
                 thumbColor: ColorManager.primary,
-                min: AppValues.v0,
-                max: AppValues.v2,
+                min: ValuesManager.v0,
+                max: ValuesManager.v2,
                 value: 1,
                 onChanged: (value) {
                   if (kDebugMode) print('Value: $value');
                 },
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppValues.v22),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: ValuesManager.v22),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

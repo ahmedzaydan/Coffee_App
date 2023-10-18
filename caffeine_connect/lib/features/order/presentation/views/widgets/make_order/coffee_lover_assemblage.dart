@@ -13,7 +13,7 @@ class CoffeeLoverAssemblage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppValues.v16),
+        borderRadius: BorderRadius.circular(ValuesManager.v16),
         gradient: const LinearGradient(
           colors: [ColorManager.pink2, ColorManager.pink1],
           begin: Alignment.centerLeft,
@@ -23,7 +23,7 @@ class CoffeeLoverAssemblage extends StatelessWidget {
       child: ListTile(
         contentPadding: EdgeInsets.zero,
         leading: const Padding(
-          padding: EdgeInsets.only(left: AppValues.v8),
+          padding: EdgeInsets.only(left: ValuesManager.v8),
           child: Icon(
             Icons.display_settings_outlined,
             color: ColorManager.black,

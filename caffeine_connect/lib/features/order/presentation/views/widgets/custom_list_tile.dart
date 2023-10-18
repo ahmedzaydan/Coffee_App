@@ -10,7 +10,7 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      minVerticalPadding: AppValues.v0,
+      minVerticalPadding: ValuesManager.v0,
       onTap: onTap,
       title: Text(
         title,
@@ -18,7 +18,7 @@ class CustomListTile extends StatelessWidget {
       ),
       trailing: const Icon(
         Icons.arrow_forward_ios,
-        size: AppValues.v20,
+        size: ValuesManager.v20,
         color: ColorManager.grey3, // TODO: check compatability with theme
       ),
       contentPadding: EdgeInsets.zero,

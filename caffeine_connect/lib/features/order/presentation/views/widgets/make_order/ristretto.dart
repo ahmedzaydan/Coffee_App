@@ -19,12 +19,12 @@ class Ristretto extends StatelessWidget {
         ),
         const Spacer(),
         Container(
-          height: AppValues.v40,
+          height: ValuesManager.v40,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppValues.v50),
+            borderRadius: BorderRadius.circular(ValuesManager.v50),
             border: Border.all(
               color: ColorManager.grey3,
-              width: AppValues.v2,
+              width: ValuesManager.v2,
             ),
           ),
           child: TextButton(
@@ -38,14 +38,14 @@ class Ristretto extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: AppValues.v10),
+        const SizedBox(width: ValuesManager.v10),
         Container(
-          height: AppValues.v40,
+          height: ValuesManager.v40,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppValues.v50),
+            borderRadius: BorderRadius.circular(ValuesManager.v50),
             border: Border.all(
               color: ColorManager.grey3,
-              width: AppValues.v2,
+              width: ValuesManager.v2,
             ),
           ),
           child: TextButton(

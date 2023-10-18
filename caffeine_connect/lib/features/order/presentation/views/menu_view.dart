@@ -19,21 +19,21 @@ class MenuView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: AppValues.v100,
+        toolbarHeight: ValuesManager.v100,
         automaticallyImplyLeading: false,
         backgroundColor: ColorManager.primary,
         title: AppBarTitle(username: username),
         actions: _appBarActions,
       ),
       body: Container(
-        padding: const EdgeInsets.all(AppValues.v25),
+        padding: const EdgeInsets.all(ValuesManager.v25),
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
           color: ColorManager.secondary,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(AppValues.v25),
-            topRight: Radius.circular(AppValues.v25),
+            topLeft: Radius.circular(ValuesManager.v25),
+            topRight: Radius.circular(ValuesManager.v25),
           ),
         ),
         child: Column(
@@ -45,11 +45,11 @@ class MenuView extends StatelessWidget {
                 color: ColorManager.grey3,
               ),
             ),
-            const SizedBox(height: AppValues.v20),
+            const SizedBox(height: ValuesManager.v20),
             const Expanded(
               child: MenuItemsGridView(),
             ),
-            const SizedBox(height: AppValues.v20),
+            const SizedBox(height: ValuesManager.v20),
             const CustomBottomNavBar(),
           ],
         ),
@@ -73,7 +73,7 @@ List<Widget> _appBarActions = [
       color: ColorManager.secondary,
     ),
   ),
-  const SizedBox(width: AppValues.v10),
+  const SizedBox(width: ValuesManager.v10),
 ];
 
 class AppBarTitle extends StatelessWidget {
@@ -83,7 +83,7 @@ class AppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(AppValues.v10),
+      padding: const EdgeInsets.all(ValuesManager.v10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

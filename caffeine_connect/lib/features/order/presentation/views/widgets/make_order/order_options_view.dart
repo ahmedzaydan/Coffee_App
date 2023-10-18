@@ -25,7 +25,7 @@ class OrderOptions extends StatelessWidget {
         const Volume(), // TODO: get color from cubit
         const VerticalSeparator(),
         const PrepareByCertainTime(),
-        const SizedBox(height: AppValues.v10),
+        const SizedBox(height: ValuesManager.v10),
       ],
     );
   }

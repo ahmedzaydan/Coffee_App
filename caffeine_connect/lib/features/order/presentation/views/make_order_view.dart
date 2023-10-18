@@ -18,7 +18,7 @@ class MakeOrderView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(AppValues.v25),
+          padding: const EdgeInsets.all(ValuesManager.v25),
           child: MakeOrderViewBody(item: item),
         ),
       ),

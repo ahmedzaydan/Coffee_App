@@ -16,11 +16,11 @@ class WelcomeText extends StatelessWidget {
         Text(
           StringsManager.welcomeText1,
           style: Styles.textStyle12.copyWith(
-            fontSize: AppValues.v28,
+            fontSize: ValuesManager.v28,
           ),
           textAlign: TextAlign.center,
         ),
-        const SizedBox(height: AppValues.v10),
+        const SizedBox(height: ValuesManager.v10),
 
         // text 2
         Text(
