@@ -32,7 +32,10 @@ abstract class ValuesManager {
   static const double v60 = 60.0;
   static const double v64 = 64.0;
   static const double v70 = 70.0;
+  static const double v80 = 80.0;
+  static const double v90 = 90.0;
   static const double v100 = 100.0;
+  static const double v110 = 110.0;
   static const double v120 = 120.0;
   static const double v140 = 140.0;
   static const double v150 = 150.0;

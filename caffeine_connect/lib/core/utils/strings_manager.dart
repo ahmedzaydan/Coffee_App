@@ -73,6 +73,8 @@ abstract class StringsManager {
   static const String amaretto = 'Amaretto';
   static const String coconut = 'Coconut';
   static const String vanilla = 'Vanilla';
-  static const String caramel = 'Caramel'; 
-   
+  static const String caramel = 'Caramel';
+
+  static const String baristaName = 'Barista Name';
+  static const String baristaRating = 'Top Barista';
 }

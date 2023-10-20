@@ -1,6 +1,7 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
+import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,6 +22,7 @@ AppBar getCustomAppBar({
   List<Widget>? actions,
 }) {
   return AppBar(
+    elevation: ValuesManager.v0,
     leading: IconButton(
       onPressed: () => Navigator.pop(context),
       padding: EdgeInsets.zero,
