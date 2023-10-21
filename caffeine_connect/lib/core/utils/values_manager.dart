@@ -1,5 +1,6 @@
 abstract class ValuesManager {
   static const double v0 = 0.0;
+  static const double v1_4 = 1.4;
   static const double v2 = 2.0;
   static const double v0_2 = 0.2;
   static const double v0_5 = 0.5;

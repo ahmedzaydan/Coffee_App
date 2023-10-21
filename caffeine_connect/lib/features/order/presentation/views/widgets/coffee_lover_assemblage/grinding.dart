@@ -4,7 +4,7 @@ import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_icon.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_image.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
 import 'package:flutter/material.dart';
 
 class Grinding extends StatelessWidget {
@@ -25,12 +25,12 @@ class Grinding extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               CustomIcon(
-                child: CustomImage(image: AssetsManager.coffeeSeed),
+                child: CustomSvgImage(image: AssetsManager.coffeeBean),
               ),
               SizedBox(width: ValuesManager.v10),
               CustomIcon(
-                child: CustomImage(
-                  image: AssetsManager.coffeeSeed,
+                child: CustomSvgImage(
+                  image: AssetsManager.coffeeBean,
                   height: ValuesManager.v45,
                   width: ValuesManager.v45,
                   color: ColorManager.black1,

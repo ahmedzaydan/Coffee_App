@@ -40,7 +40,7 @@ class SelectBaristaView extends StatelessWidget {
     );
   }
 }
-
+// TODO: make all images cached network image instead of asset image
 class BaristaItem extends StatelessWidget {
   const BaristaItem({super.key, required this.barista});
   final Barista barista;

@@ -3,7 +3,7 @@ import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_icon.dart';
-import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_image.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
 import 'package:flutter/material.dart';
 
 class Roasting extends StatelessWidget {
@@ -25,19 +25,19 @@ class Roasting extends StatelessWidget {
             children: [
               // one flame
               CustomIcon(
-                child: CustomImage(image: AssetsManager.flame),
+                child: CustomAssetImage(image: AssetsManager.flame),
               ),
 
               // two flames
               CustomIcon(
                 count: 2,
-                child: CustomImage(image: AssetsManager.flame),
+                child: CustomAssetImage(image: AssetsManager.flame),
               ),
-              
+
               // three flames
               CustomIcon(
                 count: 3,
-                child: CustomImage(
+                child: CustomAssetImage(
                   image: AssetsManager.flame,
                   color: ColorManager.black1,
                 ),

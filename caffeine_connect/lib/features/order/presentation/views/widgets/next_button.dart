@@ -4,7 +4,7 @@ import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
-// TODO: replace arrow with login or register buttonw
+// TODO: replace arrow with login or register button
 class NextButton extends StatelessWidget {
   const NextButton({
     super.key,
