@@ -6,7 +6,10 @@ import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart
 import 'package:caffeine_connect/features/order/presentation/views/coffee_lover_assemblage_view.dart';
 import 'package:caffeine_connect/features/order/presentation/views/make_order_view.dart';
 import 'package:caffeine_connect/features/order/presentation/views/menu_view.dart';
+import 'package:caffeine_connect/features/order/presentation/views/orders_view.dart';
 import 'package:caffeine_connect/features/order/presentation/views/select_barista_view.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage/additives.dart';
+import 'package:caffeine_connect/features/order/presentation/views/widgets/coffee_lover_assemblage/coffee_sort.dart';
 import 'package:caffeine_connect/features/splash/presentation/views/splash_view.dart';
 import 'package:caffeine_connect/features/splash/presentation/views/welcome_view.dart';
 import 'package:go_router/go_router.dart';
@@ -25,8 +28,8 @@ abstract class RoutesManager {
   static const String makeOrder = '/makeOrder';
   static const String coffeeLoverAssemblageView = '/coffeeLoverAssemblage';
   static const String selectBaristaView = '/selectBarista';
-  static const String coffeeCountry = '/coffeeCountry';
   static const String coffeeSortView = '/coffeeSort';
+  static const String additvesView = '/additives';
   static const String ordersView = '/orders';
   static const String paymentView = '/payment';
   static const String profileView = '/profile';
@@ -92,6 +95,24 @@ abstract class RoutesManager {
       GoRoute(
         path: selectBaristaView,
         builder: (context, state) => const SelectBaristaView(),
+      ),
+
+      // coffee sort screen
+      GoRoute(
+        path: coffeeSortView,
+        builder: (context, state) => const CoffeeSortView(),
+      ),
+
+      // additives screen
+      GoRoute(
+        path: additvesView,
+        builder: (context, state) => const AdditivesView(),
+      ),
+
+      // orders screen
+      GoRoute(
+        path: ordersView,
+        builder: (context, state) => const OrdersView(),
       ),
     ],
   );

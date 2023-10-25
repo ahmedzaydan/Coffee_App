@@ -77,4 +77,24 @@ abstract class StringsManager {
 
   static const String baristaName = 'Barista Name';
   static const String baristaRating = 'Top Barista';
+
+  // coffee sort
+  static const String santos = 'Santos';
+  static const String bourbonSantos = 'Bourbon santos';
+  static const String minas = 'Minas';
+  static const String rio = 'Rio';
+  static const String canilon = 'Canilon';
+  static const String flatBeat = 'Flat beat';
+  static const String selectCoffeeSort = 'Select a sort of coffee';
+
+  // additives
+  static const String ceylonCinnamon = 'Ceylon cinnamon';
+  static const String gratedChocolate = 'Grated chocolate';
+  static const String liquidChocolate = 'Liquid chocolate';
+  static const String marshmallow = 'Marshmallow';
+  static const String whippedCream = 'Whipped cream';
+  static const String cream = 'Cream';
+  static const String nutmeg = 'Nutmeg';
+  static const String iceCream = 'Ice cream';
+  static const String selectAdditives = 'Select Additives';
 }

@@ -1,3 +1,5 @@
+import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/vertical_separator.dart';
@@ -36,9 +38,10 @@ class CoffeeLoverAssemblageViewBody extends StatelessWidget {
             // coffee sort
             CustomListTile(
               title: StringsManager.coffeeSort,
-              onTap: () {
-                // TODO: go to coffee sort screen
-              },
+              onTap: () => navigateTo(
+                context: context,
+                dest: RoutesManager.coffeeSortView,
+              ),
             ),
             const VerticalSeparator(top: ValuesManager.v0),
             const Roasting(),
@@ -51,7 +54,10 @@ class CoffeeLoverAssemblageViewBody extends StatelessWidget {
             CustomListTile(
               title: StringsManager.additives,
               onTap: () {
-                // TODO: go to coffee sort screen
+                navigateTo(
+                  context: context,
+                  dest: RoutesManager.additvesView,
+                );
               },
             ),
             const VerticalSeparator(
@@ -62,7 +68,14 @@ class CoffeeLoverAssemblageViewBody extends StatelessWidget {
             const VerticalSeparator(top: ValuesManager.v15),
             const TotalPrice(price: 9.00),
             const SizedBox(height: ValuesManager.v20),
-            const NextButton(), // TODO: (go to my order screen)
+            NextButton(
+              onPressed: () {
+                navigateTo(
+                  context: context,
+                  dest: RoutesManager.ordersView,
+                );
+              },
+            ),
           ],
         ),
       ),

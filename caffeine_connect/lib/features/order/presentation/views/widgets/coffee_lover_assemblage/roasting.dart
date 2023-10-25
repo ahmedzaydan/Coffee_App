@@ -25,19 +25,19 @@ class Roasting extends StatelessWidget {
             children: [
               // one flame
               CustomIcon(
-                child: CustomAssetImage(image: AssetsManager.flame),
+                child: CustomSvgImage(image: AssetsManager.flame),
               ),
 
               // two flames
               CustomIcon(
                 count: 2,
-                child: CustomAssetImage(image: AssetsManager.flame),
+                child: CustomSvgImage(image: AssetsManager.flame),
               ),
 
               // three flames
               CustomIcon(
                 count: 3,
-                child: CustomAssetImage(
+                child: CustomSvgImage(
                   image: AssetsManager.flame,
                   color: ColorManager.black1,
                 ),

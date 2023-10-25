@@ -1,3 +1,5 @@
+import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/make_order/coffee_lover_assemblage.dart';
@@ -21,7 +23,11 @@ class MakeOrderViewBody extends StatelessWidget {
         const SizedBox(height: ValuesManager.v15),
         const TotalPrice(price: 5.00), // TODO: get price from cubit
         const SizedBox(height: ValuesManager.v15),
-        const NextButton(),
+        NextButton(
+          onPressed: () {
+            navigateTo(context: context, dest: RoutesManager.ordersView);
+          },
+        ),
       ],
     );
   }

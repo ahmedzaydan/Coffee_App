@@ -14,7 +14,7 @@ class CoffeeLoverAssemblageView extends StatelessWidget {
         context: context,
         title: StringsManager.coffeeLoverAssemblage,
       ),
-      body: screens[1], // TODO: use cubit to change screens
+      body: screens[0], // TODO: use cubit to change screens
     );
   }
 }
