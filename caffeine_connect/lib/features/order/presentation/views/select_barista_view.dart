@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:caffeine_connect/core/utils/assets_manager.dart';
 import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
@@ -12,34 +13,41 @@ class SelectBaristaView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(ValuesManager.v20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            StringsManager.selectBarista,
-            style: Styles.textStyle16,
-          ),
-
-          const SizedBox(height: ValuesManager.v20),
-          // baristas list
-          Expanded(
-            child: ListView.separated(
-              separatorBuilder: (context, index) {
-                return const SizedBox(height: ValuesManager.v10);
-              },
-              itemBuilder: (context, index) {
-                return BaristaItem(barista: baristas[index]);
-              },
-              itemCount: baristas.length,
+    return Scaffold(
+      appBar: getCustomAppBar(
+        context: context,
+        title: StringsManager.coffeeLoverAssemblage,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(ValuesManager.v20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              StringsManager.selectBarista,
+              style: Styles.textStyle16,
             ),
-          ),
-        ],
+
+            const SizedBox(height: ValuesManager.v20),
+            // baristas list
+            Expanded(
+              child: ListView.separated(
+                separatorBuilder: (context, index) {
+                  return const SizedBox(height: ValuesManager.v10);
+                },
+                itemBuilder: (context, index) {
+                  return BaristaItem(barista: baristas[index]);
+                },
+                itemCount: baristas.length,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
 // TODO: make all images cached network image instead of asset image
 class BaristaItem extends StatelessWidget {
   const BaristaItem({super.key, required this.barista});

@@ -35,29 +35,26 @@ class CustomCachedNetworkImage extends StatelessWidget {
     super.key,
     required this.image,
     this.aspectRatio = 1.5,
-    this.height,
-    this.width,
+    this.height = ValuesManager.v30,
+    this.width = ValuesManager.v30,
     this.borderRadius = ValuesManager.v15,
     this.fit = BoxFit.cover,
   });
   final String image;
   final double aspectRatio;
-  final double? height;
-  final double? width;
+  final double height;
+  final double width;
   final double borderRadius;
   final BoxFit fit;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: aspectRatio,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius),
-        child: CachedNetworkImage(
-          imageUrl: image,
-          fit: fit,
-          height: height,
-          width: width,
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(borderRadius),
+      child: CachedNetworkImage(
+        imageUrl: image,
+        fit: fit,
+        height: height,
+        width: width,
       ),
     );
   }

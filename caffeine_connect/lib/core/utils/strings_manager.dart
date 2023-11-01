@@ -97,4 +97,8 @@ abstract class StringsManager {
   static const String nutmeg = 'Nutmeg';
   static const String iceCream = 'Ice cream';
   static const String selectAdditives = 'Select Additives';
+
+  static const String myOrder = 'My order';
+  static const String appCurrency = 'EGP';
+  static const String orderDetails = 'Order details';
 }

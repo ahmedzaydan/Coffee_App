@@ -29,7 +29,10 @@ class CoffeeLoverAssemblageViewBody extends StatelessWidget {
             CustomListTile(
               title: StringsManager.selectBarista,
               onTap: () {
-                // TODO: go to barista list screen
+                navigateTo(
+                  context: context,
+                  dest: RoutesManager.selectBaristaView,
+                );
               },
             ),
             const VerticalSeparator(),
