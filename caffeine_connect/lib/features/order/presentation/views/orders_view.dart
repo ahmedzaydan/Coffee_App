@@ -7,6 +7,7 @@ import 'package:caffeine_connect/features/order/data/models/order_model.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
 import 'package:flutter/material.dart';
 
+// TODO: add delete dismissable feature
 OrderModel orderModel = OrderModel(
   name: 'name',
   price: 3.5,

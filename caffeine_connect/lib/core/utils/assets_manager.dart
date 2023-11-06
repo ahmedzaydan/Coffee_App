@@ -1,6 +1,10 @@
 abstract class AssetsManager {
   static const String basePath = 'assets/images';
-  static const String welcomeImage = '$basePath/welcome_image.jpg';
+  static const String animated_coffee_cup = 'assets/json/animated_coffee_cup.json';
+  static const String welcomeImage1 =
+      'https://img.freepik.com/free-photo/coffee-beans-grained-spoon_1303-22747.jpg?size=626&ext=jpg&ga=GA1.1.598079563.1699204009&semt=sph';
+  static const String welcomeImage2 =
+      'https://img.freepik.com/free-photo/coffee-steam-design-from-roasted-beans_23-2148254966.jpg?size=626&ext=jpg&ga=GA1.1.598079563.1699204009&semt=sph';
   static const String splash = '$basePath/splash_image.svg';
 
   // menu items

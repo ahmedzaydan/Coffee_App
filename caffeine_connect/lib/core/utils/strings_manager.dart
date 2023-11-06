@@ -3,8 +3,8 @@ abstract class StringsManager {
 
   // welcome screen
   static const String magicCoffee = 'Magic Coffee';
-  static const String welcomeText1 = 'Feel yourself like a barista!';
-  static const String welcomeText2 = 'Magic coffee on order';
+  static const String welcomeText1 = 'Magic coffee on order';
+  static const String welcomeText2 = 'Feel yourself like a barista!';
 
   // auth
   static const String signIn = 'Sign in';

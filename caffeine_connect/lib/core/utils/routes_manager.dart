@@ -16,15 +16,15 @@ import 'package:go_router/go_router.dart';
 
 abstract class RoutesManager {
   // TODO: swap welcome and menu
-  // static const String welcomeView = '/';
-  static const String welcomeView = '/welcomeView'; // TODO: swap
+  static const String welcomeView = '/';
+  // static const String welcomeView = '/welcomeView'; // TODO: swap
   static const String splashView = '/splash';
   static const String loginView = '/login';
   static const String registerView = '/register';
   static const String forgotPasswordView = '/forgotPassword';
   static const String verificationView = '/verification';
-  // static const String menuView = '/menu';
-  static const String menuView = '/'; // TODO: swap
+  static const String menuView = '/menu';
+  // static const String menuView = '/'; // TODO: swap
   static const String makeOrder = '/makeOrder';
   static const String coffeeLoverAssemblageView = '/coffeeLoverAssemblage';
   static const String selectBaristaView = '/selectBarista';
