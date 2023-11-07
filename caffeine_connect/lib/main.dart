@@ -2,7 +2,10 @@ import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/theme_manager.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+
   runApp(const CaffeineConnect());
 }
 
@@ -15,6 +18,5 @@ class CaffeineConnect extends StatelessWidget {
       theme: ThemeManager.lightTheme,
       debugShowCheckedModeBanner: false,
     );
-  
   }
 }

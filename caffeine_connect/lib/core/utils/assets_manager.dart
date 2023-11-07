@@ -1,11 +1,19 @@
 abstract class AssetsManager {
   static const String basePath = 'assets/images';
-  static const String animated_coffee_cup = 'assets/json/animated_coffee_cup.json';
+
+  // welcome screen
+  static const String logo =
+      'https://firebasestorage.googleapis.com/v0/b/caffeine-connect-5c357.appspot.com/o/assets%2Fimages%2Flogo.png?alt=media&token=6e476d11-a878-4371-9253-f7d94f35b605&_gl=1*p5o1f0*_ga*NjY4MDY5MDIxLjE2OTkzNTM0OTQ.*_ga_CW55HF8NVT*MTY5OTM2OTQ0MS40LjEuMTY5OTM3MDMwNC41MC4wLjA.';
+  static const String splash = 'https://firebasestorage.googleapis.com/v0/b/caffeine-connect-5c357.appspot.com/o/assets%2Fimages%2Fsplash.png?alt=media&token=0f470bd1-9824-42ff-b111-2d06032dde37&_gl=1*pmowed*_ga*NjY4MDY5MDIxLjE2OTkzNTM0OTQ.*_ga_CW55HF8NVT*MTY5OTM2OTQ0MS40LjEuMTY5OTM3MDQ5MS40OC4wLjA.';
+  
+
+
+  static const String animated_coffee_cup =
+      'assets/json/animated_coffee_cup.json';
   static const String welcomeImage1 =
       'https://img.freepik.com/free-photo/coffee-beans-grained-spoon_1303-22747.jpg?size=626&ext=jpg&ga=GA1.1.598079563.1699204009&semt=sph';
   static const String welcomeImage2 =
       'https://img.freepik.com/free-photo/coffee-steam-design-from-roasted-beans_23-2148254966.jpg?size=626&ext=jpg&ga=GA1.1.598079563.1699204009&semt=sph';
-  static const String splash = '$basePath/splash_image.svg';
 
   // menu items
   static const String americano =

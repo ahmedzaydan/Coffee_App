@@ -23,6 +23,7 @@ abstract class ValuesManager {
   static const double v26 = 26.0;
   static const double v28 = 28.0;
   static const double v30 = 30.0;
+  static const double v32 = 32.0;
   static const double v37 = 37.0;
   static const double v40 = 40.0;
   static const double v43 = 43.0;
@@ -42,4 +43,5 @@ abstract class ValuesManager {
   static const double v150 = 150.0;
   static const double v200 = 200.0;
   static const double v250 = 250.0;
+  static const double v350 = 350.0;
 }

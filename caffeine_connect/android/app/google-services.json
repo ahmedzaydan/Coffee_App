@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "701160550215",
+    "project_id": "caffeine-connect-5c357",
+    "storage_bucket": "caffeine-connect-5c357.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701160550215:android:141ee93c85156e43bbe662",
+        "android_client_info": {
+          "package_name": "com.example.caffeine_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTutQQ_wOmYWUh8IYZYb1ESvNsA1bbmBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
