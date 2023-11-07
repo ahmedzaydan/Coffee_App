@@ -1,36 +1,27 @@
-import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
-import 'package:caffeine_connect/core/utils/strings_manager.dart';
-import 'package:caffeine_connect/core/widgets/forward_button.dart';
+import 'package:caffeine_connect/features/splash/presentation/views/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      // TODO: implement splash screen
-      body: Center(
-        child: SizedBox(
-          height: 100,
-          width: 100,
-          child: Column(
-            children: [
-              const Text(StringsManager.test),
-              ForwardButton(
-                onPressed: () {
-                  navigateTo(
-                    context: context,
-                    dest: RoutesManager.menuView,
-                    replace: true,
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: Constants.splashScreenDelayInSeconds),
+      () => Navigator.pushReplacementNamed(context, RoutesManager.menuView),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const SplashViewBody();
   }
 }

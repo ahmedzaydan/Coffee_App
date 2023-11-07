@@ -1,6 +1,5 @@
 import 'package:caffeine_connect/core/utils/assets_manager.dart';
 import 'package:caffeine_connect/core/utils/color_manager.dart';
-import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
@@ -8,6 +7,7 @@ import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/forward_button.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
+import 'package:caffeine_connect/features/splash/presentation/views/widgets/magic_coffee.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -98,16 +98,7 @@ class GreenRectangle extends StatelessWidget {
             borderRadius: ValuesManager.v0,
           ),
           const Gap(ValuesManager.v30),
-
-          // text
-          Text(
-            StringsManager.magicCoffee,
-            style: TextStyle(
-              fontFamily: Constants.reenieBeanie,
-              fontSize: width * 0.18,
-              color: ColorManager.primary,
-            ),
-          ),
+          MagicCoffee(fontSize: width * 0.18),
         ],
       ),
     );

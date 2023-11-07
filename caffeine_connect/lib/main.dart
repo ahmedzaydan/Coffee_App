@@ -18,5 +18,8 @@ class CaffeineConnect extends StatelessWidget {
       theme: ThemeManager.lightTheme,
       debugShowCheckedModeBanner: false,
     );
+    // return MaterialApp(
+    //   home: SplashView(),
+    // );
   }
 }
