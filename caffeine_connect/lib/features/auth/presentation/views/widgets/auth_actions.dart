@@ -1,8 +1,6 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/constants.dart';
-import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
-import 'package:caffeine_connect/core/widgets/forward_button.dart';
 import 'package:flutter/material.dart';
 
 class AuthActions extends StatelessWidget {
@@ -21,6 +19,7 @@ class AuthActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         if (text1 != null)
           Text(
@@ -42,15 +41,6 @@ class AuthActions extends StatelessWidget {
               ),
             ),
           ),
-        const Spacer(),
-        ForwardButton(
-          onPressed: dest != null
-              ? () => navigateTo(
-                    context: context,
-                    dest: dest!,
-                  )
-              : null,
-        ),
       ],
     );
   }

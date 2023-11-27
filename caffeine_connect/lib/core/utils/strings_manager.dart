@@ -22,7 +22,7 @@ abstract class StringsManager {
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
   static const String enterCode = 'Enter the OTP code which sent to your email';
-
+  static const String orSignInWith = 'Or sign in with';
   static const String empty = '';
 
   // menu

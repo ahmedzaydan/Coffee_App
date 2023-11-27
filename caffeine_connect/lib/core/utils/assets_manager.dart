@@ -6,7 +6,9 @@ abstract class AssetsManager {
       'https://firebasestorage.googleapis.com/v0/b/caffeine-connect-5c357.appspot.com/o/assets%2Fimages%2Flogo.png?alt=media&token=6e476d11-a878-4371-9253-f7d94f35b605&_gl=1*p5o1f0*_ga*NjY4MDY5MDIxLjE2OTkzNTM0OTQ.*_ga_CW55HF8NVT*MTY5OTM2OTQ0MS40LjEuMTY5OTM3MDMwNC41MC4wLjA.';
   static const String splash = 'https://firebasestorage.googleapis.com/v0/b/caffeine-connect-5c357.appspot.com/o/assets%2Fimages%2Fsplash.png?alt=media&token=0f470bd1-9824-42ff-b111-2d06032dde37&_gl=1*pmowed*_ga*NjY4MDY5MDIxLjE2OTkzNTM0OTQ.*_ga_CW55HF8NVT*MTY5OTM2OTQ0MS40LjEuMTY5OTM3MDQ5MS40OC4wLjA.';
   
-
+  // auth 
+  static const String googleLogo = '$basePath/google_logo.png';
+  static const String facebookLogo = '$basePath/facebook_logo.png';
 
   static const String animated_coffee_cup =
       'assets/json/animated_coffee_cup.json';

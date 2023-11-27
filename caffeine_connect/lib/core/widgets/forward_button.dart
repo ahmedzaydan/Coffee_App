@@ -15,7 +15,7 @@ class ForwardButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: ColorManager.secondary,
-      radius: Constants.nextButtonRadius,
+      radius: Constants.buttonRadius,
       child: IconButton(
         iconSize: ValuesManager.v32,
         icon: Icon(
