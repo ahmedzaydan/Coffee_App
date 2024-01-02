@@ -8,6 +8,6 @@ abstract class Constants {
   static int textAnimationDuration = 3;
 
   static const int zero = 0;
-  static const double buttonRadius = 20;
+  static const double buttonRadius = 25;
   static const int codeLength = 4;
 }

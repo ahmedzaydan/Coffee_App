@@ -21,8 +21,11 @@ abstract class StringsManager {
   static const String alreadyAMember = 'Already a member?';
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
+  static const String sendCode = 'Send code';
   static const String enterCode = 'Enter the OTP code which sent to your email';
+  static const String verify = 'Verify';
   static const String orSignInWith = 'Or sign in with';
+  static const String orSignUpWith = 'Or sign up with';
   static const String empty = '';
 
   // menu

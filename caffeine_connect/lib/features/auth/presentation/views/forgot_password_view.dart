@@ -1,17 +1,16 @@
-import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/core/widgets/forward_button.dart';
+import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_text.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
-class ForwardPasswordView extends StatelessWidget {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+class ForgotPasswordView extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
-  ForwardPasswordView({super.key});
+  ForgotPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,29 +28,17 @@ class ForwardPasswordView extends StatelessWidget {
                 text2: StringsManager.enterYourEmail,
               ),
               const SizedBox(height: ValuesManager.v10),
-              // email address
-              Form(
-                key: _formKey,
-                child: CustomTextFormField(
-                  controller: _emailController,
-                  hintText: StringsManager.email,
-                  prefixIcon: const Icon(
-                    Icons.email_rounded,
-                    color: ColorManager.secondary,
-                  ),
-                ),
-              ),
-              const SizedBox(height: ValuesManager.v120),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: ForwardButton(
-                  onPressed: () {
-                    navigateTo(
-                      context: context,
-                      dest: RoutesManager.verificationView,
-                    );
-                  },
-                ),
+              Email(emailController: _emailController),
+              const Gap(ValuesManager.v20),
+              CustomMaterialButton(
+                text: StringsManager.sendCode,
+                onPressed: () {
+                  navigateTo(
+                    // TODO: validate before naviagation
+                    context: context,
+                    dest: RoutesManager.verificationView,
+                  );
+                },
               ),
             ],
           ),

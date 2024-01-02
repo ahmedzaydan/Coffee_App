@@ -1,12 +1,13 @@
-import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/core/widgets/forward_button.dart';
+import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_text.dart';
 import 'package:flutter/material.dart';
+import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/style.dart';
 
 class VerificationView extends StatelessWidget {
   const VerificationView({super.key});
@@ -27,19 +28,17 @@ class VerificationView extends StatelessWidget {
                 text2: StringsManager.enterCode,
               ),
               const SizedBox(height: ValuesManager.v20),
-              const Center(child: CodeDigitsInput()),
+              Center(child: CodeDigitsInput()),
               const SizedBox(height: ValuesManager.v20),
-              // TODO: validate before naviagation
-              Align(
-                alignment: Alignment.bottomRight,
-                child: ForwardButton(
-                  onPressed: () {
-                    navigateTo(
-                      context: context,
-                      dest: RoutesManager.splashView,
-                    );
-                  },
-                ),
+              CustomMaterialButton(
+                text: StringsManager.verify,
+                onPressed: () {
+                  navigateTo(
+                    context: context,
+                    dest: RoutesManager.splashView,
+                    replace: true,
+                  );
+                },
               ),
             ],
           ),
@@ -50,33 +49,19 @@ class VerificationView extends StatelessWidget {
 }
 
 class CodeDigitsInput extends StatelessWidget {
-  const CodeDigitsInput({super.key});
+  CodeDigitsInput({super.key});
+  OtpFieldController otpController = OtpFieldController();
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: ValuesManager.v70,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-        itemBuilder: (context, index) {
-          return Container(
-            margin: const EdgeInsets.all(ValuesManager.v10),
-            height: ValuesManager.v70,
-            width: ValuesManager.v48,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(ValuesManager.v10),
-              color: ColorManager.offWhite,
-              border: Border.all(
-                color: ColorManager.secondary,
-                width: ValuesManager.v2,
-              ),
-            ),
-            // child: const TextField(), // TODO: implement this later
-          );
-        },
-        itemCount: Constants.codeLength,
-      ),
+    return OTPTextField(
+      controller: otpController,
+      length: Constants.codeLength,
+      width: MediaQuery.of(context).size.width,
+      fieldWidth: ValuesManager.v40,
+      fieldStyle: FieldStyle.box,
+      onCompleted: (pin) {},
+      keyboardType: TextInputType.number,
     );
   }
 }

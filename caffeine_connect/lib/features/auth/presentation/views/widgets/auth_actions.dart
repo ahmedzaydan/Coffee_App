@@ -4,10 +4,6 @@ import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class AuthActions extends StatelessWidget {
-  final String? text1;
-  final String? textButtonContent;
-  final void Function()? onPressed;
-  final String? dest;
   const AuthActions({
     super.key,
     this.text1,
@@ -15,6 +11,11 @@ class AuthActions extends StatelessWidget {
     this.onPressed,
     this.dest,
   });
+
+  final String? text1;
+  final String? textButtonContent;
+  final void Function()? onPressed;
+  final String? dest;
 
   @override
   Widget build(BuildContext context) {

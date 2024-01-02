@@ -1,12 +1,14 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
-import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_actions.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_section.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_text.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
@@ -27,18 +29,16 @@ class RegisterView extends StatelessWidget {
                 text2: StringsManager.createAccount,
               ),
               RegisterForm(),
-              const SizedBox(height: ValuesManager.v120),
-              AuthActions(
+              const Gap(10),
+              AuthSection(
+                buttonText: StringsManager.signUp,
+                authSepText: StringsManager.orSignUpWith,
                 text1: StringsManager.alreadyAMember,
-                textButtonContent: StringsManager.signIn,
+                textButtonText: StringsManager.signIn,
+                dest: RoutesManager.loginView,
                 onPressed: () {
-                  navigateTo(
-                    context: context,
-                    dest: RoutesManager.loginView,
-                  );
+                  // TODO: validate form before naviagation
                 },
-                // TODO: validate form before naviagation
-                // dest: RoutesManager.splashView,
               ),
             ],
           ),
@@ -86,36 +86,9 @@ class RegisterForm extends StatelessWidget {
           ),
 
           const SizedBox(height: ValuesManager.v10),
-
-          // email
-          CustomTextFormField(
-            controller: _emailController,
-            hintText: StringsManager.email,
-            prefixIcon: const Icon(
-              Icons.email_rounded,
-              color: ColorManager.secondary,
-            ),
-          ),
-
+          Email(emailController: _emailController),
           const SizedBox(height: ValuesManager.v10),
-
-          // password
-          CustomTextFormField(
-            controller: _passwordController,
-            hintText: StringsManager.password,
-            prefixIcon: const Icon(
-              Icons.lock_rounded,
-              color: ColorManager.secondary,
-            ),
-            suffixIcon: const Icon(
-              Icons.visibility,
-              color: ColorManager.secondary,
-            ),
-            obsecureText: true,
-            suffixOnPressed: () {
-              // TODO: implement password visibility
-            },
-          ),
+          Password(passwordController: _passwordController),
         ],
       ),
     );

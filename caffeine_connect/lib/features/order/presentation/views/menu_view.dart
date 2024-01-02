@@ -46,9 +46,7 @@ class MenuView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: ValuesManager.v20),
-            const Expanded(
-              child: MenuItemsGridView(),
-            ),
+            const Expanded(child: MenuItemsGridView()),
             const SizedBox(height: ValuesManager.v20),
             const CustomBottomNavBar(),
           ],

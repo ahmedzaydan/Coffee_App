@@ -24,7 +24,6 @@ abstract class RoutesManager {
   static const String forgotPasswordView = '/forgotPassword';
   static const String verificationView = '/verification';
   static const String menuView = '/menu';
-  // static const String menuView = '/'; // TODO: swap
   static const String makeOrder = '/makeOrder';
   static const String coffeeLoverAssemblageView = '/coffeeLoverAssemblage';
   static const String selectBaristaView = '/selectBarista';
@@ -45,13 +44,13 @@ abstract class RoutesManager {
       // login screen
       GoRoute(
         path: loginView,
-        builder: (context, state) => const LoginView(),
+        builder: (context, state) => LoginView(),
       ),
 
       // forgot password screen
       GoRoute(
         path: forgotPasswordView,
-        builder: (context, state) => ForwardPasswordView(),
+        builder: (context, state) => ForgotPasswordView(),
       ),
 
       // sign up screen

@@ -36,9 +36,10 @@ class GridViewMenuItem extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(ValuesManager.v15),
               child: CustomCachedNetworkImage(
-                image: item.image,
-                fit: BoxFit.contain,
-              ),
+                  image: item.image,
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.15),
             ),
 
             const SizedBox(height: ValuesManager.v10),

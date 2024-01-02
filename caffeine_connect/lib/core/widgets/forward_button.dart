@@ -1,6 +1,5 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/constants.dart';
-import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
 class ForwardButton extends StatelessWidget {
@@ -17,7 +16,7 @@ class ForwardButton extends StatelessWidget {
       backgroundColor: ColorManager.secondary,
       radius: Constants.buttonRadius,
       child: IconButton(
-        iconSize: ValuesManager.v32,
+        iconSize: Constants.buttonRadius * 1.2,
         icon: Icon(
           Icons.arrow_forward,
           color: iconColor,

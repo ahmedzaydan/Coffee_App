@@ -1,4 +1,5 @@
 import 'package:caffeine_connect/core/utils/constants.dart';
+import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/features/splash/presentation/views/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,12 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future.delayed(
       const Duration(seconds: Constants.splashScreenDelayInSeconds),
-      () => Navigator.pushReplacementNamed(context, RoutesManager.menuView),
+      () {
+        navigateTo(
+          context: context,
+          dest: RoutesManager.menuView,
+        );
+      },
     );
   }
 
