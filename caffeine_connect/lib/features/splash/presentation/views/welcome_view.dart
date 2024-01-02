@@ -98,7 +98,7 @@ class GreenRectangle extends StatelessWidget {
             borderRadius: ValuesManager.v0,
           ),
           const Gap(ValuesManager.v30),
-          MagicCoffee(fontSize: width * 0.18),
+          MagicCoffee(fontSize: width * 0.14),
         ],
       ),
     );
