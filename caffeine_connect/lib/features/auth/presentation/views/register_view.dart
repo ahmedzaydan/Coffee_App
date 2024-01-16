@@ -1,14 +1,17 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
+import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
+import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_section.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_text.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter/services.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
@@ -29,16 +32,11 @@ class RegisterView extends StatelessWidget {
                 text2: StringsManager.createAccount,
               ),
               RegisterForm(),
-              const Gap(10),
-              AuthSection(
-                buttonText: StringsManager.signUp,
+              const AuthSection(
                 authSepText: StringsManager.orSignUpWith,
                 text1: StringsManager.alreadyAMember,
                 textButtonText: StringsManager.signIn,
                 dest: RoutesManager.loginView,
-                onPressed: () {
-                  // TODO: validate form before naviagation
-                },
               ),
             ],
           ),
@@ -62,14 +60,20 @@ class RegisterForm extends StatelessWidget {
       key: _formKey,
       child: Column(
         children: [
-          // name
+          // username
           CustomTextFormField(
             controller: _nameController,
-            hintText: StringsManager.createAccount,
+            hintText: StringsManager.username,
             prefixIcon: const Icon(
               Icons.person_rounded,
               color: ColorManager.secondary,
             ),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return "Username should not be empty";
+              }
+              return null;
+            },
           ),
 
           const SizedBox(height: ValuesManager.v10),
@@ -79,16 +83,48 @@ class RegisterForm extends StatelessWidget {
             controller: _mobileNumberController,
             keyboardType: TextInputType.phone,
             hintText: StringsManager.mobileNumber,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(11),
+            ],
             prefixIcon: const Icon(
               Icons.phone_android_rounded,
               color: ColorManager.secondary,
             ),
+            validator: (value) {
+              if (value!.isEmpty) {
+                return "Mobile number should not be empty";
+              } else if (value.length < 11) {
+                return "Mobile number should be 11 digits";
+              }
+              return null;
+            },
           ),
 
           const SizedBox(height: ValuesManager.v10),
           Email(emailController: _emailController),
           const SizedBox(height: ValuesManager.v10),
           Password(passwordController: _passwordController),
+
+          // Sign up button
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: ValuesManager.v20),
+            child: CustomMaterialButton(
+              text: StringsManager.signUp,
+              textStyle: Styles.textStyle18.copyWith(
+                fontWeight: FontWeight.w700,
+              ),
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  AuthCubit.get(context).register(
+                    username: _nameController.text,
+                    mobileNumber: _mobileNumberController.text,
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  );
+                }
+              },
+            ),
+          ),
         ],
       ),
     );

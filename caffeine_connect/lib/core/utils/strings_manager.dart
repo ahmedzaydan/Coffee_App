@@ -9,7 +9,7 @@ abstract class StringsManager {
   // auth
   static const String signIn = 'Sign in';
   static const String welcomeBack = 'Welcome back!';
-  static const String email = 'Email address';
+  static const String email = 'user123@example.com';
   static const String password = 'Password';
   static const String forgotPassword = 'Forgot password?';
   static const String newMember = 'New member?';

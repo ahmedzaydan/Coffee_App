@@ -1,4 +1,5 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/functions.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -22,14 +23,20 @@ class Password extends StatelessWidget {
         Icons.lock_rounded,
         color: ColorManager.secondary,
       ),
-
       suffixIcon: const Icon(
         Icons.visibility, // TODO: toggle visibility
         color: ColorManager.secondary,
       ),
-
       obsecureText: true,
       suffixOnPressed: () {},
+      validator: (value) {
+        if (value!.isEmpty) {
+          return "Password should not be empty";
+        } else if (validatedPassword(passwordController.text) != null) {
+          return validatedPassword(passwordController.text);
+        }
+        return null;
+      },
     );
   }
 }

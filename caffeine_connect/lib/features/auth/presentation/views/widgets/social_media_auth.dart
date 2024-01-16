@@ -25,7 +25,7 @@ class SocialMediaAuth extends StatelessWidget {
               width: 60,
             ),
           ),
-          // google button
+          // facebook button
           MaterialButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(value / 2),
