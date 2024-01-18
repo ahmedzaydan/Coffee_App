@@ -1,16 +1,23 @@
 import 'package:caffeine_connect/core/utils/assets_manager.dart';
+import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 
 class SocialMediaAuth extends StatelessWidget {
-  const SocialMediaAuth({super.key});
-  final double value = 60;
+  const SocialMediaAuth({
+    super.key,
+    required this.cubit,
+  });
+  final double value = ValuesManager.v60;
+
+  final AuthCubit cubit;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // google button
+          // Google button
           MaterialButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(value / 2),
@@ -18,14 +25,17 @@ class SocialMediaAuth extends StatelessWidget {
             minWidth: value,
             height: value,
             padding: EdgeInsets.zero,
-            onPressed: () {},
+            onPressed: () {
+              cubit.loginWithGoogle();
+            },
             child: Image.asset(
               AssetsManager.googleLogo,
-              height: 60,
-              width: 60,
+              height: ValuesManager.v60,
+              width: ValuesManager.v60,
             ),
           ),
-          // facebook button
+
+          // Facebook button
           MaterialButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(value / 2),
@@ -33,11 +43,13 @@ class SocialMediaAuth extends StatelessWidget {
             minWidth: value,
             height: value,
             padding: EdgeInsets.zero,
-            onPressed: () {},
+            onPressed: () {
+              cubit.loginWithFacebook();
+            },
             child: Image.asset(
               AssetsManager.facebookLogo,
-              height: 40,
-              width: 40,
+              height: ValuesManager.v40,
+              width: ValuesManager.v40,
             ),
           ),
         ],
@@ -45,4 +57,3 @@ class SocialMediaAuth extends StatelessWidget {
     );
   }
 }
-        

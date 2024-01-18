@@ -1,25 +1,29 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_options.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_separator.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/social_media_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class RegisterForm extends StatelessWidget {
+class RegisterViewBody extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _mobileNumberController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  RegisterForm({super.key});
+  RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -84,30 +88,44 @@ class RegisterForm extends StatelessWidget {
               ),
 
               const SizedBox(height: ValuesManager.v10),
+
               Email(emailController: _emailController),
+
               const SizedBox(height: ValuesManager.v10),
+
               Password(passwordController: _passwordController),
 
+              const SizedBox(height: ValuesManager.v25),
+
               // Sign up button
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: ValuesManager.v20),
-                child: CustomMaterialButton(
-                  text: StringsManager.signUp,
-                  textStyle: Styles.textStyle18.copyWith(
-                    fontWeight: FontWeight.w700,
-                  ),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      AuthCubit.get(context).register(
-                        username: _nameController.text,
-                        mobileNumber: _mobileNumberController.text,
-                        email: _emailController.text,
-                        password: _passwordController.text,
-                      );
-                    }
-                  },
+              CustomMaterialButton(
+                text: StringsManager.signUp,
+                textStyle: Styles.textStyle18.copyWith(
+                  fontWeight: FontWeight.w700,
                 ),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    AuthCubit.get(context).register(
+                      username: _nameController.text,
+                      mobileNumber: _mobileNumberController.text,
+                      email: _emailController.text,
+                      password: _passwordController.text,
+                    );
+                  }
+                },
+              ),
+
+              const SizedBox(height: ValuesManager.v20),
+
+              const AuthSeparator(text: StringsManager.orSignInWith),
+
+              SocialMediaAuth(cubit: AuthCubit.get(context)),
+
+              // Already member, sign in
+              const AuthOptions(
+                text1: StringsManager.alreadyAMember,
+                textButtonText: StringsManager.signIn,
+                dest: RoutesManager.loginView,
               ),
             ],
           ),

@@ -1,23 +1,27 @@
 import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_options.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_separator.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/forgot_password.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
+import 'package:caffeine_connect/features/auth/presentation/views/widgets/social_media_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
-class LoginForm extends StatelessWidget {
+class LoginViewBody extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  LoginForm({super.key});
+  LoginViewBody({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
@@ -42,7 +46,10 @@ class LoginForm extends StatelessWidget {
             children: [
               Email(emailController: _emailController),
               const SizedBox(height: ValuesManager.v10),
+
+              // Password
               Password(passwordController: _passwordController),
+
               const ForgotPassword(),
 
               const Gap(5),
@@ -61,6 +68,19 @@ class LoginForm extends StatelessWidget {
                     );
                   }
                 },
+              ),
+
+              const Gap(15),
+
+              const AuthSeparator(text: StringsManager.orSignInWith),
+
+              SocialMediaAuth(cubit: AuthCubit.get(context)),
+
+              // New member, sign up
+              const AuthOptions(
+                text1: StringsManager.newMember,
+                textButtonText: StringsManager.signUp,
+                dest: RoutesManager.registerView,
               ),
             ],
           ),
