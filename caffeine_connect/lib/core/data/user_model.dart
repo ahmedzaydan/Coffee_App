@@ -3,7 +3,6 @@ class UserModel {
   String? username;
   String? mobileNumber;
   String? email;
-  String? password;
   double? balance;
 
   UserModel({
@@ -11,7 +10,6 @@ class UserModel {
     required this.username,
     required this.mobileNumber,
     required this.email,
-    required this.password,
     this.balance = 0.0,
   });
   
@@ -23,7 +21,6 @@ class UserModel {
     username = json['username'];
     mobileNumber = json['mobileNumber'];
     email = json['email'];
-    password = json['password'];
     balance = json['balance'];
   }
 
@@ -33,7 +30,6 @@ class UserModel {
       'username': username,
       'mobileNumber': mobileNumber,
       'email': email,
-      'password': password,
       'balance': balance,
     };
   }

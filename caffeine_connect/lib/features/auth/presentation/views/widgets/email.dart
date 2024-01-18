@@ -22,13 +22,8 @@ class Email extends StatelessWidget {
         color: ColorManager.secondary,
       ),
       validator: (value) {
-        if (value!.isEmpty) {
-          return "Email should not be empty";
-        }
-        else if (validatedEmail(emailController.text) != null) {
-          return validatedEmail(emailController.text);
-        }
-        return null;
+        // TODO: pass controller instead?? 
+        return validatedEmail(value!);
       },
     );
   }

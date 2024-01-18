@@ -1,6 +1,8 @@
 import 'package:caffeine_connect/core/utils/assets_manager.dart';
+import 'package:caffeine_connect/core/utils/color_manager.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
+import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
-import 'package:caffeine_connect/features/splash/presentation/views/widgets/magic_coffee.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -33,7 +35,16 @@ class SplashViewBody extends StatelessWidget {
                   width: width * 0.4,
                   height: width * 0.4,
                 ),
-                MagicCoffee(fontSize: width * 0.18),
+
+                // Magic coffee
+                Text(
+                  StringsManager.magicCoffee,
+                  style: TextStyle(
+                    fontFamily: Constants.reenieBeanie,
+                    fontSize: height * 0.18,
+                    color: ColorManager.primary,
+                  ),
+                ),
               ],
             ),
           ),

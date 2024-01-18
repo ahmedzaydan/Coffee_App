@@ -30,12 +30,8 @@ class Password extends StatelessWidget {
       obsecureText: true,
       suffixOnPressed: () {},
       validator: (value) {
-        if (value!.isEmpty) {
-          return "Password should not be empty";
-        } else if (validatedPassword(passwordController.text) != null) {
-          return validatedPassword(passwordController.text);
-        }
-        return null;
+        // TODO: pass controller instead??
+        return validatedPassword(value!);
       },
     );
   }

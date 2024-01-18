@@ -15,3 +15,6 @@ abstract class Constants {
 
   static var usersCollection = FirebaseFirestore.instance.collection('users');
 }
+
+// ignore: constant_identifier_names
+enum ToastStates { SUCCESS, ERROR, WARNING }

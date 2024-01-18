@@ -1,6 +1,7 @@
 import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/functions.dart';
+import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/vertical_separator.dart';
@@ -10,13 +11,11 @@ import 'package:flutter/material.dart';
 class AuthSection extends StatelessWidget {
   const AuthSection({
     super.key,
-    required this.authSepText,
     required this.text1,
     required this.textButtonText,
     required this.dest,
   });
 
-  final String authSepText;
   final String text1;
   final String textButtonText;
   final String dest;
@@ -25,7 +24,7 @@ class AuthSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AuthSeparator(text: authSepText),
+        const AuthSeparator(text: StringsManager.orSignInWith),
         const SocialMediaAuth(),
         Row(
           mainAxisSize: MainAxisSize.min,
