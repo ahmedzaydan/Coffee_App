@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 abstract class ThemeManager {
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    useMaterial3: true,
     // Scaffold
     scaffoldBackgroundColor: ColorManager.primary,
     // Text theme

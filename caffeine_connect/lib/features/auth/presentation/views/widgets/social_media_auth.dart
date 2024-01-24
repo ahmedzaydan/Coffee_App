@@ -43,7 +43,7 @@ class SocialMediaAuth extends StatelessWidget {
             minWidth: value,
             height: value,
             padding: EdgeInsets.zero,
-            onPressed: () {
+            onPressed: () async {
               cubit.loginWithFacebook();
             },
             child: Image.asset(

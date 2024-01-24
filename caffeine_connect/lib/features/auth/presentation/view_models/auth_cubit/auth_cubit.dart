@@ -105,22 +105,19 @@ class AuthCubit extends Cubit<AuthState> {
       // Trigger the sign-in flow
       final LoginResult loginResult = await FacebookAuth.instance.login();
 
-      if (loginResult.accessToken == null) {
-        if (kDebugMode) {
-          print("Login failed");
-        }
+      // Create a credential from the access token
+      final OAuthCredential facebookAuthCredential =
+          FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+      // Once signed in, get the user credential
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithCredential(facebookAuthCredential);
+
+      final User? user = userCredential.user;
+
+      if (user == null) {
         emit(LoginErrorState(StringsManager.loginFailed));
       } else {
-        // Create a credential from the access token
-        final AuthCredential credential =
-            FacebookAuthProvider.credential(loginResult.accessToken!.token);
-
-        // Once signed in, get the UserCredential
-        final UserCredential authResult =
-            await FirebaseAuth.instance.signInWithCredential(credential);
-
-        var user = authResult.user!;
-
         // Check if user exists in firestore
         var userDoc = await Constants.usersCollection.doc(user.uid).get();
 
