@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class AssetsManager {
   static const String basePath = 'assets/images';
 

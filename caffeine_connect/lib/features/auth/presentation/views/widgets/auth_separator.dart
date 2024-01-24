@@ -10,6 +10,7 @@ class AuthSeparator extends StatelessWidget {
     required this.text,
     this.color = ColorManager.grey2,
   });
+
   final String text;
   final Color color;
   @override

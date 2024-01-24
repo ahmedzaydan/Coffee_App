@@ -7,25 +7,34 @@ abstract class StringsManager {
   static const String welcomeText2 = 'Magic coffee on order';
 
   // auth
+  static const String email = 'user123@example.com';
+  static const String password = 'Password';
+  static const String success = 'Success';
+  // login
   static const String signIn = 'Sign in';
   static const String welcomeBack = 'Welcome back!';
-  static const String email = 'Email address';
-  static const String password = 'Password';
-  static const String forgotPassword = 'Forgot password?';
-  static const String newMember = 'New member?';
-  static const String signUp = 'Sign up';
-  static const String createAccount = 'Create an account here';
-  static const String mobileNumber = 'Mobile Number';
-  static const String bySigningUp =
-      'By signing up you agree with our Terms of Use';
+  static const String orSignInWith = 'Or sign in with';
   static const String alreadyAMember = 'Already a member?';
+  static const String noUser = 'No user found';
+  static const String loginFailed = 'Login Failed';
+  static const String wrongPassword = 'Wrong password';
+
+  // forgot password
+  static const String forgotPassword = 'Forgot password?';
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
   static const String sendCode = 'Send code';
   static const String enterCode = 'Enter the OTP code which sent to your email';
   static const String verify = 'Verify';
-  static const String orSignInWith = 'Or sign in with';
-  static const String orSignUpWith = 'Or sign up with';
+
+  // register
+  static const String newMember = 'New member?';
+  static const String signUp = 'Sign up';
+  static const String createAccount = 'Create an account here';
+  static const String mobileNumber = 'Mobile Number';
+  static const String registerFailed = 'Register Failed';
+  static const String userAlreadyExists = 'User already exists';
+
   static const String empty = '';
 
   // menu

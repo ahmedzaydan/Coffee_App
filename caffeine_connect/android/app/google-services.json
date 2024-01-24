@@ -12,7 +12,20 @@
           "package_name": "com.example.caffeine_connect"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "701160550215-7496c8r2n8lu66583su1jbb6kfrsiksj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.caffeine_connect",
+            "certificate_hash": "fbcd2732b59f236c86abface57db0dd028c780af"
+          }
+        },
+        {
+          "client_id": "701160550215-ho7bl5t83uej261565a4eeomob7osrkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDTutQQ_wOmYWUh8IYZYb1ESvNsA1bbmBQ"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701160550215-ho7bl5t83uej261565a4eeomob7osrkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "701160550215-6a3p0e4o5st2dh026204jfnl90jmhsl5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.caffeineConnect.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

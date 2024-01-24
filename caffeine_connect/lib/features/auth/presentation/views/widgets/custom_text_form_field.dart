@@ -2,6 +2,7 @@ import 'package:caffeine_connect/core/utils/color_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
@@ -12,6 +13,8 @@ class CustomTextFormField extends StatelessWidget {
   final void Function()? suffixOnPressed;
   final bool obsecureText;
   final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
+  final List<TextInputFormatter>? inputFormatters;
   const CustomTextFormField({
     super.key,
     this.controller,
@@ -22,6 +25,8 @@ class CustomTextFormField extends StatelessWidget {
     this.obsecureText = false,
     this.suffixOnPressed,
     this.keyboardType,
+    this.validator,
+    this.inputFormatters,
   });
 
   @override
@@ -29,7 +34,9 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       keyboardType: keyboardType,
       controller: controller,
+      validator: validator,
       obscureText: obsecureText,
+      inputFormatters: inputFormatters,
       decoration: InputDecoration(
         disabledBorder: decorateBorder(),
         enabledBorder: decorateBorder(),
