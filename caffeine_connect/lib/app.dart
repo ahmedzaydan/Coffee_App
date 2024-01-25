@@ -10,7 +10,10 @@ class CaffeineConnect extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => AuthCubit()),
+        BlocProvider(
+          create: (context) => AuthCubit()..facebookLogout()
+            
+        ),
       ],
       child: MaterialApp.router(
         routerConfig: RoutesManager.router,
