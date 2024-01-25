@@ -26,7 +26,7 @@ class SocialMediaAuth extends StatelessWidget {
             height: value,
             padding: EdgeInsets.zero,
             onPressed: () {
-              cubit.loginWithGoogle();
+              cubit.googleLogin();
             },
             child: Image.asset(
               AssetsManager.googleLogo,
@@ -44,7 +44,8 @@ class SocialMediaAuth extends StatelessWidget {
             height: value,
             padding: EdgeInsets.zero,
             onPressed: () async {
-              cubit.loginWithFacebook();
+              // cubit.facebookLogin();
+              print(cubit.getLoginMethod());
             },
             child: Image.asset(
               AssetsManager.facebookLogo,

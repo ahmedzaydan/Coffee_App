@@ -53,10 +53,11 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  Future<void> loginWithGoogle() async {
+  Future<void> googleLogin() async {
     try {
       // Trigger the authentication flow
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
       if (googleUser == null) {
         emit(LoginErrorState(StringsManager.loginFailed));
       } else {
@@ -91,6 +92,7 @@ class AuthCubit extends Cubit<AuthState> {
           // Save user to firestore
           await Constants.usersCollection.doc(user.uid).set(userModel.toMap());
         }
+
         emit(LoginSuccessState());
       }
     } catch (error) {
@@ -100,7 +102,7 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  Future<void> loginWithFacebook() async {
+  Future<void> facebookLogin() async {
     try {
       // Trigger the sign-in flow
       final LoginResult loginResult = await FacebookAuth.instance.login();
@@ -118,10 +120,17 @@ class AuthCubit extends Cubit<AuthState> {
       if (user == null) {
         emit(LoginErrorState(StringsManager.loginFailed));
       } else {
+        if (kDebugMode) {
+          print("Facebook Sign-In Successful");
+          print("User: $user");
+        }
         // Check if user exists in firestore
         var userDoc = await Constants.usersCollection.doc(user.uid).get();
 
         if (!userDoc.exists) {
+          if (kDebugMode) {
+            print("User does not exist in firestore");
+          }
           // Create user
           UserModel userModel = UserModel(
             uid: user.uid,
@@ -140,6 +149,42 @@ class AuthCubit extends Cubit<AuthState> {
         print("Error during Facebook Sign-In: $error");
         emit(LoginErrorState(StringsManager.loginFailed));
       }
+    }
+  }
+
+  Future<void> logout() async {
+    try {
+      emit(LogoutLoadingState());
+
+      await FirebaseAuth.instance.signOut();
+
+      emit(LogoutSuccessState());
+    } catch (error) {
+      emit(LogoutErrorState(StringsManager.logoutFailed));
+    }
+  }
+
+  Future<void> googleLogout() async {
+    try {
+      emit(LogoutLoadingState());
+
+      await GoogleSignIn().signOut();
+
+      emit(LogoutSuccessState());
+    } catch (error) {
+      emit(LoginErrorState(StringsManager.logoutFailed));
+    }
+  }
+
+  Future<void> facebookLogout() async {
+    try {
+      emit(LogoutLoadingState());
+
+      await FacebookAuth.instance.logOut();
+
+      emit(LogoutSuccessState());
+    } catch (error) {
+      emit(LoginErrorState(StringsManager.logoutFailed));
     }
   }
 
@@ -191,5 +236,39 @@ class AuthCubit extends Cubit<AuthState> {
         emit(LoginErrorState(StringsManager.registerFailed));
       }
     }
+  }
+
+  String getLoginMethod() {
+    var user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      // Check if the user is signed in with Google
+      if (user.providerData.any(
+        (userInfo) {
+          return userInfo.providerId == 'google.com';
+        },
+      )) {
+        return StringsManager.googleMethod;
+      }
+
+      // Check if the user is signed in with Facebook
+      if (user.providerData.any(
+        (userInfo) {
+          return userInfo.providerId == 'facebook.com';
+        },
+      )) {
+        return StringsManager.facebookMethod;
+      }
+
+      // Check if the user is signed in with Firebase Email/Password
+      if (user.providerData.any(
+        (userInfo) {
+          return userInfo.providerId == 'firebase';
+        },
+      )) {
+        return StringsManager.firebaseMethod;
+      }
+    }
+    return StringsManager.empty;
   }
 }

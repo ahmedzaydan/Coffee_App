@@ -10,6 +10,9 @@ abstract class StringsManager {
   static const String email = 'user123@example.com';
   static const String password = 'Password';
   static const String success = 'Success';
+  static const String googleMethod = 'Google';
+  static const String facebookMethod = 'Facebook';
+  static const String firebaseMethod = 'Firebase Email/Password';
   // login
   static const String signIn = 'Sign in';
   static const String welcomeBack = 'Welcome back!';
@@ -26,6 +29,8 @@ abstract class StringsManager {
   static const String sendCode = 'Send code';
   static const String enterCode = 'Enter the OTP code which sent to your email';
   static const String verify = 'Verify';
+
+  static const String logoutFailed = 'Logout Failed';
 
   // register
   static const String newMember = 'New member?';
