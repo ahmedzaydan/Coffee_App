@@ -93,6 +93,10 @@ class AuthCubit extends Cubit<AuthState> {
           await Constants.usersCollection.doc(user.uid).set(userModel.toMap());
         }
 
+        if (kDebugMode) {
+          print("Google Sign-In Successful");
+          print("User: $user");
+        }
         emit(LoginSuccessState());
       }
     } catch (error) {

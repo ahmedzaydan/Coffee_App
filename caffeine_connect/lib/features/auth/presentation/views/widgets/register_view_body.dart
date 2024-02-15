@@ -8,11 +8,9 @@ import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_options.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_separator.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/social_media_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -116,10 +114,6 @@ class RegisterViewBody extends StatelessWidget {
               ),
 
               const SizedBox(height: ValuesManager.v20),
-
-              const AuthSeparator(text: StringsManager.orSignInWith),
-
-              SocialMediaAuth(cubit: AuthCubit.get(context)),
 
               // Already member, sign in
               const AuthOptions(

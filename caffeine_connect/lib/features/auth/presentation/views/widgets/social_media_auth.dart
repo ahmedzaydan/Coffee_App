@@ -45,7 +45,7 @@ class SocialMediaAuth extends StatelessWidget {
             padding: EdgeInsets.zero,
             onPressed: () async {
               // cubit.facebookLogin();
-              print(cubit.getLoginMethod());
+              // print(cubit.getLoginMethod());
             },
             child: Image.asset(
               AssetsManager.facebookLogo,

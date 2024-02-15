@@ -3,6 +3,7 @@ import 'package:caffeine_connect/core/utils/routes_manager.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
+import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_text.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:flutter/material.dart';
