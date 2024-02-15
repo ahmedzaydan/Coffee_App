@@ -1,7 +1,6 @@
 import 'package:caffeine_connect/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/login_view.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/register_view.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/verification_view.dart';
 import 'package:caffeine_connect/features/order/data/models/menu_item_model.dart';
 import 'package:caffeine_connect/features/order/presentation/views/coffee_lover_assemblage_view.dart';
 import 'package:caffeine_connect/features/order/presentation/views/make_order_view.dart';
@@ -22,7 +21,6 @@ abstract class RoutesManager {
   static const String loginView = '/login';
   static const String registerView = '/register';
   static const String forgotPasswordView = '/forgotPassword';
-  static const String verificationView = '/verification';
   static const String menuView = '/menu';
   static const String makeOrder = '/makeOrder';
   static const String coffeeLoverAssemblageView = '/coffeeLoverAssemblage';
@@ -57,12 +55,6 @@ abstract class RoutesManager {
       GoRoute(
         path: registerView,
         builder: (context, state) => const RegisterView(),
-      ),
-
-      // verification screen
-      GoRoute(
-        path: verificationView,
-        builder: (context, state) => const VerificationView(),
       ),
 
       // splash screen

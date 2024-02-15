@@ -3,6 +3,7 @@ import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
@@ -90,30 +91,36 @@ String? validatedEmail(String email) {
   }
 }
 
-  Color colorToast(ToastStates state) {
-    Color color;
-    if (state == ToastStates.SUCCESS) {
-      color = Colors.green;
-    } else if (state == ToastStates.ERROR) {
-      color = Colors.red;
-    } else {
-      color = Colors.amber;
-    }
-    return color;
+Color colorToast(ToastStates state) {
+  Color color;
+  if (state == ToastStates.SUCCESS) {
+    color = Colors.green;
+  } else if (state == ToastStates.ERROR) {
+    color = Colors.red;
+  } else {
+    color = Colors.amber;
   }
+  return color;
+}
 
-  // custom showToast
-  void showCustomToast({
-    required String message,
-    required ToastStates state,
-  }) {
-    Fluttertoast.showToast(
-      msg: message,
-      toastLength: Toast.LENGTH_LONG,
-      gravity: ToastGravity.BOTTOM,
-      timeInSecForIosWeb: 5,
-      backgroundColor: colorToast(state),
-      textColor: Colors.white,
-      fontSize: ValuesManager.v18,
-    );
+// custom showToast
+void showCustomToast({
+  required String message,
+  required ToastStates state,
+}) {
+  Fluttertoast.showToast(
+    msg: message,
+    toastLength: Toast.LENGTH_LONG,
+    gravity: ToastGravity.BOTTOM,
+    timeInSecForIosWeb: 5,
+    backgroundColor: colorToast(state),
+    textColor: Colors.white,
+    fontSize: ValuesManager.v18,
+  );
+}
+
+void kprint(dynamic value) {
+  if (kDebugMode) {
+    print(value);
   }
+}

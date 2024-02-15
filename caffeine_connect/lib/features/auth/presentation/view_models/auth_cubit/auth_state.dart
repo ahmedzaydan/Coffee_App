@@ -33,3 +33,17 @@ class RegisterErrorState extends AuthState {
   final String error;
   RegisterErrorState(this.error);
 }
+
+// Reset Password States
+class ResetPasswordLoadingState extends AuthState {}
+
+class ResetPasswordSuccessState extends AuthState {
+  final String email;
+
+  ResetPasswordSuccessState(this.email);
+}
+
+class ResetPasswordErrorState extends AuthState {
+  final String error;
+  ResetPasswordErrorState(this.error);
+}

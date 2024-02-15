@@ -18,3 +18,5 @@ abstract class Constants {
 
 // ignore: constant_identifier_names
 enum ToastStates { SUCCESS, ERROR, WARNING }
+
+enum AuthMethod { google, facebook, firebase }
