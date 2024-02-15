@@ -60,9 +60,10 @@ class LoginViewBody extends StatelessWidget {
                 textStyle: Styles.textStyle18.copyWith(
                   fontWeight: FontWeight.w700,
                 ),
-                onPressed: () {
+                onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    AuthCubit.get(context).login(
+                    await AuthCubit.get(context).login(
+                      method: AuthMethod.firebase,
                       email: _emailController.text,
                       password: _passwordController.text,
                     );
@@ -74,7 +75,7 @@ class LoginViewBody extends StatelessWidget {
 
               const AuthSeparator(text: StringsManager.orSignInWith),
 
-              SocialMediaAuth(cubit: AuthCubit.get(context)),
+              const SocialMediaAuth(),
 
               // New member, sign up
               const AuthOptions(

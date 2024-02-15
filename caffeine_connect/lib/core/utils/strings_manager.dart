@@ -7,39 +7,36 @@ abstract class StringsManager {
   static const String welcomeText2 = 'Magic coffee on order';
 
   // auth
-  static const String email = 'user123@example.com';
-  static const String password = 'Password';
+  static const String registerFailed = 'Register Failed';
+  static const String userAlreadyExists = 'User already exists';
+  static const String noUser = 'User not found';
+  static const String loginFailed = 'Login Failed';
+  static const String wrongPassword = 'Wrong password';
   static const String success = 'Success';
+  static const String logoutFailed = 'Logout Failed';
+  static const String emailHint = 'user123@example.com';
+  static const String defalutMobileNumber = '00000000000';
+  static const String password = 'Password';
   static const String googleMethod = 'Google';
   static const String facebookMethod = 'Facebook';
   static const String firebaseMethod = 'Firebase Email/Password';
-  // login
   static const String signIn = 'Sign in';
   static const String welcomeBack = 'Welcome back!';
   static const String orSignInWith = 'Or sign in with';
   static const String alreadyAMember = 'Already a member?';
-  static const String noUser = 'No user found';
-  static const String loginFailed = 'Login Failed';
-  static const String wrongPassword = 'Wrong password';
-
-  // forgot password
   static const String forgotPassword = 'Forgot password?';
   static const String enterYourEmail = 'Enter your email address';
   static const String verification = 'Verification';
-  static const String sendCode = 'Send code';
+  static const String resetPassword = 'Reset password';
   static const String enterCode = 'Enter the OTP code which sent to your email';
   static const String verify = 'Verify';
-
-  static const String logoutFailed = 'Logout Failed';
-
-  // register
   static const String newMember = 'New member?';
   static const String signUp = 'Sign up';
   static const String createAccount = 'Create an account here';
   static const String mobileNumber = 'Mobile Number';
-  static const String registerFailed = 'Register Failed';
-  static const String userAlreadyExists = 'User already exists';
+  static const String userIsNotSignedIn = 'User is not signed in';
 
+  static const String defaultError = 'An error occurred';
   static const String empty = '';
 
   // menu

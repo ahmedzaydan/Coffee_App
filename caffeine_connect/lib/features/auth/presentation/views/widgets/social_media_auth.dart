@@ -1,4 +1,5 @@
 import 'package:caffeine_connect/core/utils/assets_manager.dart';
+import 'package:caffeine_connect/core/utils/constants.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
@@ -6,13 +7,11 @@ import 'package:flutter/material.dart';
 class SocialMediaAuth extends StatelessWidget {
   const SocialMediaAuth({
     super.key,
-    required this.cubit,
   });
   final double value = ValuesManager.v60;
-
-  final AuthCubit cubit;
   @override
   Widget build(BuildContext context) {
+    final cubit = AuthCubit.get(context);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -25,8 +24,8 @@ class SocialMediaAuth extends StatelessWidget {
             minWidth: value,
             height: value,
             padding: EdgeInsets.zero,
-            onPressed: () {
-              cubit.googleLogin();
+            onPressed: () async {
+              await cubit.login(method: AuthMethod.google);
             },
             child: Image.asset(
               AssetsManager.googleLogo,
@@ -44,7 +43,7 @@ class SocialMediaAuth extends StatelessWidget {
             height: value,
             padding: EdgeInsets.zero,
             onPressed: () async {
-              // cubit.facebookLogin();
+              await cubit.login(method: AuthMethod.facebook);
               // print(cubit.getLoginMethod());
             },
             child: Image.asset(

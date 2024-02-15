@@ -16,13 +16,13 @@ class Email extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextFormField(
       controller: emailController,
-      hintText: StringsManager.email,
+      hintText: StringsManager.emailHint,
       prefixIcon: const Icon(
         Icons.email_rounded,
         color: ColorManager.secondary,
       ),
       validator: (value) {
-        // TODO: pass controller instead?? 
+        // TODO: pass controller instead??
         return validatedEmail(value!);
       },
     );
