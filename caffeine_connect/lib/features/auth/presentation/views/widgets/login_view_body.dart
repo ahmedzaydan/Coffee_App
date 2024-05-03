@@ -7,11 +7,9 @@ import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/custom_material_button.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/auth_cubit/auth_cubit.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_options.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/auth_separator.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/email.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/forgot_password.dart';
 import 'package:caffeine_connect/features/auth/presentation/views/widgets/password.dart';
-import 'package:caffeine_connect/features/auth/presentation/views/widgets/social_media_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -62,20 +60,28 @@ class LoginViewBody extends StatelessWidget {
                 ),
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                    await AuthCubit.get(context).login(
+                    await AuthCubit.get(context)
+                        .login(
                       method: AuthMethod.firebase,
                       email: _emailController.text,
                       password: _passwordController.text,
-                    );
+                    )
+                        .then((value) {
+                      navigateTo(
+                        context: context,
+                        dest: RoutesManager.menuView,
+                        replace: true,
+                      );
+                    });
                   }
                 },
               ),
 
-              const Gap(15),
+              // const Gap(15),
 
-              const AuthSeparator(text: StringsManager.orSignInWith),
+              // const AuthSeparator(text: StringsManager.orSignInWith),
 
-              const SocialMediaAuth(),
+              // const SocialMediaAuth(),
 
               // New member, sign up
               const AuthOptions(

@@ -103,12 +103,20 @@ class RegisterViewBody extends StatelessWidget {
                 ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    AuthCubit.get(context).register(
+                    AuthCubit.get(context)
+                        .register(
                       username: _nameController.text,
                       mobileNumber: _mobileNumberController.text,
                       email: _emailController.text,
                       password: _passwordController.text,
-                    );
+                    )
+                        .then((value) {
+                      navigateTo(
+                        context: context,
+                        dest: RoutesManager.menuView,
+                        replace: true,
+                      );
+                    });
                   }
                 },
               ),

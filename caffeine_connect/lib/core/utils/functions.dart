@@ -69,7 +69,7 @@ String? validatedPassword(String password) {
     return null;
   } else {
     return "Password must be at lease 8 characters, \n"
-        "1 uppercase, 1 lowercase, 1 digit, 1 special character.";
+        "1 uppercase, 1 lowercase, 1 digit\nand 1 special character.";
   }
 }
 

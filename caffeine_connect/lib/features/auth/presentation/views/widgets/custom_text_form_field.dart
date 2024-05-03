@@ -44,6 +44,7 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         hintStyle: Styles.textStyle12.copyWith(
           color: hintColor ?? ColorManager.grey4,
+          
         ),
         prefixIcon:
             prefixIcon != null ? CustomPrefixIcon(icon: prefixIcon!) : null,

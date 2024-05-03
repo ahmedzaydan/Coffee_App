@@ -3,17 +3,56 @@ import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/app_auth_service.dart';
 import 'package:caffeine_connect/features/auth/presentation/view_models/social_auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitState());
 
-  static AuthCubit get(context) => BlocProvider.of(context);
   AuthService appAuthService = AppAuthService();
   SocialAuthService googleAuthService = GoogleAuthService();
   SocialAuthService facebookAuthState = FacebookAuthService();
+  bool isPasswordVisible = false;
+
+  static AuthCubit get(context) => BlocProvider.of(context);
+  Future<void> signInWithFacebook() async {
+    try {
+      emit(LoginLoadingState());
+
+      // Trigger the sign-in flow
+      final LoginResult loginResult = await FacebookAuth.instance.login();
+
+      if (kDebugMode) {
+        print('loginResult: $loginResult');
+      }
+
+      // Create a credential from the access token
+      final OAuthCredential facebookAuthCredential =
+          FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+      if (kDebugMode) {
+        print('facebookAuthCredential: $facebookAuthCredential');
+      }
+
+      // Once signed in, return the UserCredential
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithCredential(facebookAuthCredential);
+
+      if (kDebugMode) {
+        print('userCredential: $userCredential');
+      }
+
+      emit(LoginSuccessState());
+    } catch (e) {
+      emit(LoginErrorState(e.toString()));
+      if (kDebugMode) {
+        print('Error: $e');
+      }
+    }
+  }
 
   Future<void> register({
     required String username,
@@ -108,5 +147,10 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ResetPasswordLoadingState());
     AuthState state = await appAuthService.resetPassword(email: email);
     emit(state);
+  }
+
+  void togglePasswordVisibility() {
+    isPasswordVisible = !isPasswordVisible;
+    emit(TogglePasswordVisibilityState());
   }
 }

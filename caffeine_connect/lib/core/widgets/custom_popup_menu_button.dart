@@ -1,6 +1,7 @@
 import 'package:caffeine_connect/core/utils/strings_manager.dart';
 import 'package:caffeine_connect/core/utils/styles.dart';
 import 'package:caffeine_connect/core/utils/values_manager.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 class CustomPopupMenuButton extends StatelessWidget {
   const CustomPopupMenuButton({
@@ -23,7 +24,9 @@ class CustomPopupMenuButton extends StatelessWidget {
       ),
       itemBuilder: (context) => items,
       onSelected: (String value) {
-        print('value: $value');
+        if (kDebugMode) {
+          print('value: $value');
+        }
       },
       // padding: EdgeInsets.zero,
       child: Text(

@@ -9,7 +9,6 @@ import 'package:caffeine_connect/core/utils/values_manager.dart';
 import 'package:caffeine_connect/core/widgets/forward_button.dart';
 import 'package:caffeine_connect/features/order/presentation/views/widgets/custom_images.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
@@ -33,37 +32,39 @@ class WelcomeView extends StatelessWidget {
 }
 
 class GreenRectangle extends StatelessWidget {
-  const GreenRectangle({super.key, required this.height});
+  const GreenRectangle({
+    super.key,
+    required this.height,
+  });
   final double height;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-        top: ValuesManager.v120,
-        bottom: ValuesManager.v30,
+      margin: EdgeInsets.only(
+        top: height * 0.2,
+        bottom: height * 0.06,
       ),
       padding: const EdgeInsets.all(ValuesManager.v20),
       width: double.infinity,
-      height: ValuesManager.v350,
+      height: height + height * 0.03,
       color: ColorManager.secondary,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // logo
-          const CustomCachedNetworkImage(
+          CustomCachedNetworkImage(
             image: AssetsManager.logo,
-            width: ValuesManager.v200,
-            height: ValuesManager.v200,
+            width: height * 0.6,
+            height: height * 0.6,
             borderRadius: ValuesManager.v0,
           ),
-          const Gap(ValuesManager.v30),
 
-          // Magic coffee
+          // Magic coffee text
           Text(
             StringsManager.magicCoffee,
             style: TextStyle(
               fontFamily: Constants.reenieBeanie,
-              fontSize: height * 0.12,
+              fontSize: height * 0.15,
               color: ColorManager.primary,
             ),
           ),
@@ -95,7 +96,9 @@ class Section2 extends StatelessWidget {
           ),
           Text(
             StringsManager.welcomeText2,
-            style: Styles.textStyle18.copyWith(color: ColorManager.grey2),
+            style: Styles.textStyle18.copyWith(
+              color: ColorManager.grey2,
+            ),
           ),
           const Spacer(),
           Align(

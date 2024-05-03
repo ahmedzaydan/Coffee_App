@@ -1,5 +1,6 @@
 import 'package:caffeine_connect/app.dart';
 import 'package:caffeine_connect/bloc_observer.dart';
+import 'package:caffeine_connect/core/di.dart';
 import 'package:caffeine_connect/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await initAppModule();
 
   Bloc.observer = MyBlocObserver();
 

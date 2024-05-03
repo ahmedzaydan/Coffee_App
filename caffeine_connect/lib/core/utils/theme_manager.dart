@@ -6,6 +6,16 @@ abstract class ThemeManager {
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     // Scaffold
     scaffoldBackgroundColor: ColorManager.primary,
+    // Appbar
+    appBarTheme: const AppBarTheme(
+      backgroundColor: ColorManager.primary,
+      elevation: 0.0,
+      shadowColor: ColorManager.primary,
+      scrolledUnderElevation: 0.0,
+    ),
+
+    primaryColorLight: ColorManager.primary,
+
     // Text theme
     textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
     // Color scheme

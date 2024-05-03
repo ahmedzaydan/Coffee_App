@@ -42,7 +42,9 @@ abstract class RoutesManager {
       // login screen
       GoRoute(
         path: loginView,
-        builder: (context, state) => LoginView(),
+        builder: (context, state) {
+          return const LoginView();
+        },
       ),
 
       // forgot password screen

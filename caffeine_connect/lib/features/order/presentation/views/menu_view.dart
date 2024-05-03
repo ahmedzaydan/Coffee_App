@@ -24,6 +24,7 @@ class MenuView extends StatelessWidget {
         backgroundColor: ColorManager.primary,
         title: AppBarTitle(username: username),
         actions: _appBarActions,
+        elevation: 0.0,
       ),
       body: Container(
         padding: const EdgeInsets.all(ValuesManager.v25),

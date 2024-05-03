@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'values_manager.dart';
 
 abstract class Styles {
-  // TODO: regular 28, 15, 17
-
   static const TextStyle textStyle10 = TextStyle(
     fontSize: ValuesManager.v10,
     fontWeight: FontWeight.w300,

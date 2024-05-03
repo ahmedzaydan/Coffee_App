@@ -47,3 +47,5 @@ class ResetPasswordErrorState extends AuthState {
   final String error;
   ResetPasswordErrorState(this.error);
 }
+
+class TogglePasswordVisibilityState extends AuthState {}
